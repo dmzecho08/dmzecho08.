@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>xx | Hexo</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="xx | Hexo">
+  <title>hexo配置问题 | Hexo</title>
+  <meta name="keywords" content=" hexo ">
+  <meta name="description" content="hexo配置问题 | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="常用命令hexo new &quot;文件名&quot;    #新建.md文件 hexo g       #生成静态文件 hexo server  #启动服务器。默认情况下，访问网址为： http:&#x2F;&#x2F;localhost:4000&#x2F; hexo d       #部署网站  常见错误及解决方法error: Spawn failedat ChildProcess.&lt;anonymous&gt;">
 <meta property="og:type" content="article">
@@ -308,19 +308,25 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-xx" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-hexo配置问题" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">xx</h1>
+        <h1 class="article-title">hexo配置问题</h1>
     
     <div class="article-meta">
         
         
         
+        
+        <span class="tag">
+            
+            <a href="javascript:" class="color5">hexo</a>
+            
+        </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2021-11-29 11:46:31'>2019-11-02 16:43</time>
+        创建时间:<time class="date" title='更新时间: 2021-11-29 13:01:34'>2021-11-29 12:54</time>
         
     </div>
     <div class="article-meta">
@@ -342,7 +348,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#leap-motion"><span class="toc-text">leap motion</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%95%E7%9B%AE%E6%91%84%E5%83%8F%E5%A4%B4%E4%B8%8E%E5%8F%8C%E7%9B%AE%E6%91%84%E5%83%8F%E5%A4%B4%E5%9C%A8%E6%B5%8B%E8%B7%9D%E4%B8%8A%E7%9A%84%E5%B7%AE%E5%BC%82"><span class="toc-text">单目摄像头与双目摄像头在测距上的差异</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-text">常用命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95"><span class="toc-text">常见错误及解决方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#hexo-windows%E9%85%8D%E7%BD%AE"><span class="toc-text">hexo windows配置</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -358,57 +364,24 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <pre><code>sudo apt install ros-kinetic- //用于安装ros中的依赖项
+        <h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><pre><code>hexo new &quot;文件名&quot;    #新建.md文件
+hexo g       #生成静态文件
+hexo server  #启动服务器。默认情况下，访问网址为： http://localhost:4000/
+hexo d       #部署网站
 </code></pre>
-<p>samba服务器客户端</p>
-<pre><code>sudo apt install smbclient
-sudo apt-get install cifs-utils   #下载相应组件
-sudo mount -t cifs //10.1.1.20/share  /home/xx/share  #挂载服务器
-//10.1.1.20/share    /home/xx/share cifs passward=123,dir_mode=0777,file_mode=0777 0 0  #ubuntu16开机自动挂载
+<h3 id="常见错误及解决方法"><a href="#常见错误及解决方法" class="headerlink" title="常见错误及解决方法"></a>常见错误及解决方法</h3><pre><code>error: Spawn failedat ChildProcess.&lt;anonymous&gt; (/home/xx/myblog/node_modules/...)
 </code></pre>
-<p>  在catch_bottle.launch里面，点击ur5e_ros_control.launch，ctrl+b进入文件，修改robot_ip为对应的虚拟机里面的IP地址。<br>  修改虚拟机ip的方法<br>  sudo ifconfig eth0 10.1.1.190</p>
-<p>ctrl+h为显示隐藏文件,再点一次为隐藏</p>
-<pre><code>sudo gedit /etc/hosts  //为Ubuntu 16.04 修改hosts的命令，例：添加一行  10.1.1.20  server-power//实验室服务器
-
-
-sudo apt-get --purge remove+包名  //卸载软件
-
-
-dpkg --list //可以查看安装的所有的软件，并且是按首字母排序
-
-sudo apt-get -f install //能装好大部分的依赖；
-
-sudo apt-get install+依赖名  //可以安装指定的依赖项
-
-sudo chmod 777+文件的完整路径     //可修改文件权限为可写
-
-sudo rm -rf+文件名 //暴力删除文件
-
-wine uninstaller //卸载用wine安装的软件
+<p>1.删除.deploy_git文件后重新部署</p>
+<p>2.依次执行</p>
+<pre><code>hexo clean 
+hexo g
+hexo d
 </code></pre>
-<p>c++中在全局声明中使用 using namespace std,表示使std命名空间中的名称全局可用。类似的有using std::cout，使标准库中的cout在指定区域内可用。</p>
-<pre><code>wine CAJVieweru.exe  #打开知网阅读器,需要在软件安装目录下，wine为Ubuntu运行Windows程序的工具。
-
-sudo mount -t cifs //10.1.1.20/share  /home/xx/share  #挂载服务器 
-</code></pre>
-<p>不能用“PATH=/some /directory”，因为这将删除 $PATH 中其他的所有目录，只能作添加：“PATH=$PATH:/some/directory”。</p>
-<p>  clion使用技巧，如果发现添加了新的项目，编译找不到相关节点， 首先在clion里查看环境配置，看是否配置了有关路径。之外可以删除cmake-build-debug文件，用rebuild project重新生成，再编译运行。<br>  如果该项目之前放在其他位置运行过，最好完全删除之前的，避免相互影响。  </p>
-<h2 id="leap-motion"><a href="#leap-motion" class="headerlink" title="leap motion"></a>leap motion</h2><pre><code>sudo leapd #运行leapd
-
-LeapControlPanel #打开控制面板 或者用命令
-
-LeapControlPanel --showsettings
-
-Visualizer #可视化
-</code></pre>
-<h2 id="单目摄像头与双目摄像头在测距上的差异"><a href="#单目摄像头与双目摄像头在测距上的差异" class="headerlink" title="单目摄像头与双目摄像头在测距上的差异"></a>单目摄像头与双目摄像头在测距上的差异</h2><p>   单目摄像头的大致测距原理，是先通过图像匹配进行目标识别（各种车型、行人、物体等），再通过目标在图像中的大小去估算目标距离。这就要求在估算距离之前首先对目标进行准确识别，是汽车还是行人，是货车、SUV还是小轿车。准确识别是准确估算距离的第一步。<br>   而双目检测的方式就是通过对两幅图像视差的计算，直接对前方景物（图像所拍摄到的范围）进行距离测量，而无需判断前方出现的是什么类型的障碍物。所以对于任何类型的障碍物，都能根据距离信息的变化，进行必要的预警或制动。<br>    #引用自<a target="_blank" rel="noopener" href="http://www.eepw.com.cn/article/201710/367600.htm">http://www.eepw.com.cn/article/201710/367600.htm</a></p>
-<pre><code>roslaunch gazebo_ros empty_world.launch #开启gazebo
-rm test.txt #删除test文件
-rm -r test #删除非空文件夹及其目录下的所有文件夹及文件
-rmdir test #删除空文件夹
-
-killall gzserver
-killall gzclient
+<h3 id="hexo-windows配置"><a href="#hexo-windows配置" class="headerlink" title="hexo windows配置"></a>hexo windows配置</h3><p>主要步骤参考官网<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">hexo官网</a><br>补充参考<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/343934573342">hexo配置参考</a>,某些步骤存在下载较慢的问题，需要科学上网。<br>再将电脑的.ssh key放到github的SSH keys一栏即可建立链接</p>
+<pre><code>运行hexo d报错
+WARN Deprecated config detected: &quot;use_date_for_updated&quot; is deprecated
+需要将配置文件_config.yml中的
+use_date_for_updated 改为 updated_option
 </code></pre>
 
       
@@ -419,12 +392,12 @@ killall gzclient
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>xx</p>
+    <p><span class="copy-title">文章标题:</span>hexo配置问题</p>
     
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="DmzEcho">DmzEcho</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-11-02, 16:43:17</p>
-    <p><span class="copy-title">最后更新:</span>2021-11-29, 11:46:31</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/11/02/xx/" title="xx">http://example.com/2019/11/02/xx/</a>
+    <p><span class="copy-title">发布时间:</span>2021-11-29, 12:54:56</p>
+    <p><span class="copy-title">最后更新:</span>2021-11-29, 13:01:34</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2021/11/29/hexo%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98/" title="hexo配置问题">http://example.com/2021/11/29/hexo%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>

@@ -55,7 +55,7 @@
 </div>
 
 <body>
-<aside class="nav">
+<aside class="nav mobile">
     <div class="nav-left">
         <a href="/" class="avatar_target">
     <img class="avatar" src="/img/avatar.jpg" />
@@ -140,6 +140,14 @@
         <a href="javascript:" class="color4">markdown</a>
     </li>
     
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">matlab</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">python</a>
+    </li>
+    
     <div class="clearfix"></div>
 </div>
 
@@ -167,19 +175,19 @@
         </a>
         
         <a  class=""
-           href="/2021/11/29/Matlab%E5%AD%A6%E4%B9%A0/"
-           data-tag=""
+           href="/2021/03/11/Matlab%E5%AD%A6%E4%B9%A0/"
+           data-tag="matlab"
            data-author="" >
-            <span class="post-title" title=""></span>
-            <span class="post-date" title="2021-11-29 12:20:49">2021/11/29</span>
+            <span class="post-title" title="Matlab学习">Matlab学习</span>
+            <span class="post-date" title="2021-03-11 21:54:56">2021/03/11</span>
         </a>
         
         <a  class=""
-           href="/2021/11/29/Python%E5%AD%A6%E4%B9%A0/"
-           data-tag=""
+           href="/2021/06/23/Python%E5%AD%A6%E4%B9%A0/"
+           data-tag="python"
            data-author="" >
-            <span class="post-title" title=""></span>
-            <span class="post-date" title="2021-11-29 12:20:49">2021/11/29</span>
+            <span class="post-title" title="Python学习">Python学习</span>
+            <span class="post-date" title="2021-06-23 19:54:56">2021/06/23</span>
         </a>
         
         <a  class=""
@@ -312,41 +320,12 @@
         </div>
     </div>
 </aside>
-<div class="post">
+<div class="post index">
     <div class="pjax">
-        <article id="post-Matlab学习" class="article article-type-post" itemscope itemprop="blogPost">
+        <article class="index">
+            <div class="toc-ref">
     
-    <div class="article-meta">
-        
-        
-        
-        
-    </div>
-    <div class="article-meta">
-        
-        创建时间:<time class="date" title='更新时间: 2021-11-29 11:46:31'>2021-11-29 12:20</time>
-        
-    </div>
-    <div class="article-meta">
-        
-        
-        <span id="busuanzi_container_page_pv">
-            阅读:<span id="busuanzi_value_page_pv">
-                <span class="count-comment">
-                    <span class="spinner">
-                      <div class="cube1"></div>
-                      <div class="cube2"></div>
-                    </span>
-                </span>
-            </span>
-        </span>
-        
-        
-    </div>
-    
-    <div class="toc-ref">
-    
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Matlab%E5%AD%A6%E4%B9%A0"><span class="toc-text">Matlab学习</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9D%90%E6%A0%87%E8%BD%B4%E8%AE%BE%E7%BD%AE"><span class="toc-text">坐标轴设置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9F%A9%E9%98%B5%E5%AE%9A%E4%B9%89"><span class="toc-text">矩阵定义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0"><span class="toc-text">常用函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%BB%E5%9B%BE"><span class="toc-text">画图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%BA%E6%96%87%E4%B8%ADmatlab%E6%A0%87%E5%87%86%E7%94%BB%E5%9B%BE"><span class="toc-text">论文中matlab标准画图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ndgrid-%E7%94%9F%E6%88%90%E7%BD%91%E6%A0%BC"><span class="toc-text">ndgrid 生成网格</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#size-%E8%BF%94%E5%9B%9E%E7%9F%A9%E9%98%B5%E7%9A%84%E7%BB%B4%E5%BA%A6"><span class="toc-text">size 返回矩阵的维度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#sum-%E6%B1%82%E5%85%83%E7%B4%A0%E7%9A%84%E5%92%8C"><span class="toc-text">sum 求元素的和</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#fmincon"><span class="toc-text">fmincon</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#solve-%E8%A7%A3%E6%96%B9%E7%A8%8B%EF%BC%88%E7%BB%84%EF%BC%89"><span class="toc-text">solve 解方程（组）</span></a></li></ol></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%9A%E5%AE%A2%E5%B9%B3%E5%8F%B0"><span class="toc-text">博客平台</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -359,149 +338,11 @@
     }
 </style>
 </div>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Matlab学习"><a href="#Matlab学习" class="headerlink" title="Matlab学习"></a>Matlab学习</h1><h4 id="坐标轴设置"><a href="#坐标轴设置" class="headerlink" title="坐标轴设置"></a>坐标轴设置</h4><pre><code>axis([-0.6,0.6,-0.5,0.5])          #设置坐标轴显示范围
-set(gca,&#39;xtick&#39;,-0.6:0.2:0.6)      #坐标轴标注范围和间隔
-set(gca,&#39;ytick&#39;,-0.5:0.1:0.5)
-axis equal                         #使x,y轴的单位长度相同
-axis square                        #出图为正方形
-xlabel(&#39;x&#39;)
-ylabel(&#39;y&#39;)
-</code></pre>
-<h4 id="矩阵定义"><a href="#矩阵定义" class="headerlink" title="矩阵定义"></a>矩阵定义</h4><p>a、矩阵元素必须在”[ ]”内；<br>b、矩阵的同行元素之间用空格或逗号隔开；<br>c、矩阵的行与行之间用”;”（或回车符）隔开；<br>d、矩阵的元素可以是数值、变量、表达式或函数；<br>e、矩阵的尺寸不必预先定义。</p>
-<pre><code>a=[[1,2,3];[3,2,1]]
-a=[1,2,3;3,2,1]
-</code></pre>
-<h4 id="常用函数"><a href="#常用函数" class="headerlink" title="常用函数"></a>常用函数</h4><pre><code>spline  #三次样条数据插值，yy = spline(x,y,xx)，返回在xx处的函数值yy
-#即已知x上若干离散点对应的y中的值，用三次样条曲线插值，得到xx中点的值，xx一般为linspace()
+            <h2 id="博客平台"><a href="#博客平台" class="headerlink" title="博客平台"></a>博客平台</h2><p>这个博客通过 <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> 生成，部署在 <a target="_blank" rel="noopener" href="https://pages.github.com/">GitHub Pages</a></p>
 
-repmat  #矩阵平铺，repmat([1,2;3,4],2,3),得到一个4×6的矩阵
-</code></pre>
-<h4 id="画图"><a href="#画图" class="headerlink" title="画图"></a>画图</h4><pre><code>plot3(rDataj(1,:), rDataj(2,:),rDataj(3,:), &#39;-&#39;,&#39;lineWidth&#39;,2,&#39;color&#39;,[0 .8 0])
-#指定线宽和颜色
-</code></pre>
-<h4 id="论文中matlab标准画图"><a href="#论文中matlab标准画图" class="headerlink" title="论文中matlab标准画图"></a>论文中matlab标准画图</h4><pre><code>width = 240;   % 240pt  US letter 双栏 1pt = 1/72inch   1 inch = 25.4mm
-
-xlabel(&#39;\fontname&#123;宋体&#125;力模长\fontname&#123;Times New Roman&#125;(N)&#39;,&#39;Fontname&#39;, &#39;Times New Roman&#39;);
-#xlabel(&#39;Torque $M_x$ (Nm)&#39;,&#39;interpreter&#39;,&#39;latex&#39;,&#39;FontSize&#39;,8); % Latex格式的label
-ylabel(&#39;\fontname&#123;宋体&#125;概率&#39;,&#39;Fontname&#39;, &#39;Times New Roman&#39;);
-#设置坐标轴标识
-
-set(gca, &#39;Fontsize&#39;, 8);   
-#坐标轴句柄，设置坐标轴刻度数字样式
-set(gca, &#39;XTick&#39;,0:4:20);  
-#设置X轴刻度
-
-L1 = legend([P1 P2 P3],&#39;高斯分布&#39;,&#39;均值&#39;,&#39;阈值&#39;);
-set(L1,&#39;Location&#39;,&#39;northeast&#39;,&#39;Orientation&#39;,&#39;vertical&#39;,...
-    &#39;Fontname&#39;, &#39;宋体&#39;,&#39;FontSize&#39;,8,&#39;TextColor&#39;,&#39;black&#39;);
-#legend 格式  
-
-print(&#39;S:\PbD\graph\Force_threhold_change&#39;,&#39;-djpeg&#39;,&#39;-r600&#39;);
-#输出
-
-
-#例子
-width = 240;
-set(gcf,&#39;unit&#39;,&#39;points&#39;,&#39;PaperUnits&#39;,&#39;points&#39;,&#39;PaperPosition&#39;,[0,0,width,width/5*4],...
-    &#39;position&#39;,[500 300 width width/5*4],&#39;color&#39;,&#39;w&#39;,&#39;PaperSize&#39;,[width, width/5*4]);
-
-..........
-
-plot(Data(1,(n-1)*nbData+1:n*nbData), Data(m+1,(n-1)*nbData+1:n*nbData), &#39;-&#39;,&#39;lineWidth&#39;,1.2)   
-#设置线宽，最好是用变量表示，方便修改
-
-set(gca,&#39;xtick&#39;,1:1:10,&#39;Fontname&#39;,&#39;Times New Roman&#39;,&#39;FontSize&#39;,8);
-set(gca,&#39;ytick&#39;,-550:50:-50,&#39;Fontname&#39;,&#39;Times New Roman&#39;,&#39;FontSize&#39;,8);   #坐标轴刻度
-xlabel(&#39;t(s)&#39;,&#39;Fontname&#39;,&#39;Times New Roman&#39;,&#39;FontSize&#39;,8);
-ylabel(&#39;ave-EMG(mv)&#39;,&#39;Fontname&#39;,&#39;Times New Roman&#39;,&#39;FontSize&#39;,8);     #坐标轴标识
-</code></pre>
-<h4 id="ndgrid-生成网格"><a href="#ndgrid-生成网格" class="headerlink" title="ndgrid 生成网格"></a>ndgrid 生成网格</h4><pre><code>nbGrid = 30; 
-rg = linspace(-3.5,3.5,nbGrid);         #Grid range
-[xm, ym] = ndgrid(rg,rg);     #size(xm)=30,30 
-xg = [xm(:)&#39;; ym(:)&#39;];        #Grid datapoints   size(xg)=2,900
-#size(xm(:)&#39;)=1,900  ,即将xm展成一行，类似于python中 np.reshape(1,-1)
-</code></pre>
-<h4 id="size-返回矩阵的维度"><a href="#size-返回矩阵的维度" class="headerlink" title="size 返回矩阵的维度"></a>size 返回矩阵的维度</h4><pre><code>size(a) #返回矩阵a的行数和列数
-size(a，1)  #返回行数
-size(a，2)  #返回列数
-</code></pre>
-<h4 id="sum-求元素的和"><a href="#sum-求元素的和" class="headerlink" title="sum 求元素的和"></a>sum 求元素的和</h4><pre><code>a=[[1,2,3,4];[2,3,4,5]]；
-b=sum(a);   #默认是按列求和，即保持列数不变
-# b=[3,5,7,9]
-c=sum(a,1)
-c=[3,5,7,9]
-d=sum(a,2)
-d=[10;14]
-</code></pre>
-<h4 id="fmincon"><a href="#fmincon" class="headerlink" title="fmincon"></a>fmincon</h4><pre><code># fmincon是用于求解非线性多元函数最小值的matlab函数，优化工具箱提供fmincon函数用于对有约束优化问题进行求解
-
-x= fmincon(fun,x0,A,b) 
-#给定初值x0，求解fun函数的最小值x。fun函数的约束条件为A*x&lt;= b，x0可以是标量或向量
-
-x= fmincon(fun,x0,A,b,Aeq,beq) 
-#约束条件为Aeq*x= beq 和 A*x &lt;= b。若没有不等式线性约束存在，则设置A=[]、b=[]
-
-x= fmincon(fun,x0,A,b,Aeq,beq,lb,ub) 
-#定义设计变量x的线性不等式约束下界lb和上界ub，使得总是有lb&lt;= x &lt;= ub
-#若无等式线性约束存在，则令Aeq=[]、beq=[]
-
-options = optimoptions(&#39;fmincon&#39;,&#39;Display&#39;,&#39;off&#39;);    #创建优化选项
-x= fmincon(fun,x0,A,b,Aeq,beq,lb,ub,nonlcon,options);
-#给定初值x0，求解fun函数的最小值x,A 和 Aeq 为线性不等式约束和等式约束的系数矩阵
-#A*x&lt;= b,Aeq*x= beq,lb&lt;= x &lt;= ub
-#在nonlcon参数中提供非线性不等式c(x)或等式ceq(x),fmincon函数要求c(x) &lt;= 0且ceq(x)= 0
-#用options参数指定的参数进行最小化
-
-## 简单应用
-func = @(x)3*x^2+4*x+5;
-options = optimoptions(&#39;fmincon&#39;,&#39;Display&#39;,&#39;off&#39;);
-[a,b]=fmincon(func,-4,[],[],[],[],-7,10,[],options);
-# 得到 a=-0.6667,b=3.6667
-</code></pre>
-<h4 id="solve-解方程（组）"><a href="#solve-解方程（组）" class="headerlink" title="solve 解方程（组）"></a>solve 解方程（组）</h4><pre><code># 解方程
-syms x；    #定义x为符号变量
-eq=x^2+2*x+1;
-s=solve(eq,x);
-
-# 解方程组
-syms x,y;
-eq1 = x+2*y-8;
-eq2 = 3*x+5*y-4;
-s=solve(eq1,eq2,x,y);
-# 得到 s.x =-32,   s.y=20
-</code></pre>
-
-      
-       
-    </div>
-</article>
-
-
-
-<div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span></p>
-    
-    <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="DmzEcho">DmzEcho</a></p>
-    <p><span class="copy-title">发布时间:</span>2021-11-29, 12:20:49</p>
-    <p><span class="copy-title">最后更新:</span>2021-11-29, 11:46:31</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2021/11/29/Matlab%E5%AD%A6%E4%B9%A0/" title="">http://example.com/2021/11/29/Matlab%E5%AD%A6%E4%B9%A0/</a>
-    <p>
-        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
-    </p>
-</div>
-
-
-
-
-
-    
-
-
-
-
+        </article>
+        
+        
     </div>
     <div class="copyright">
         <p class="footer-entry">©2017 DmzEcho</p>
@@ -530,7 +371,7 @@ s=solve(eq1,eq2,x,y);
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#math','#hexo','#markdown',],
+            'data': ['#math','#hexo','#markdown','#matlab','#python',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');

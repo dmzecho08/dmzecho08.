@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Hexo</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="Hexo">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="Ubuntu学习touch    #新建一个空文件  文件和目录文件——文件 目录——文件夹 git更新至最新版本1、查看git版本 git --version  2、添加Git官方的软件源 sudo add-apt-repository ppa:git-core&#x2F;ppa  3、更新列表 sudo apt update sudo apt install -f sudo apt upgrade  &#x2F;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2021/11/29/Ubuntu%E5%AD%A6%E4%B9%A0/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Ubuntu学习touch    #新建一个空文件  文件和目录文件——文件 目录——文件夹 git更新至最新版本1、查看git版本 git --version  2、添加Git官方的软件源 sudo add-apt-repository ppa:git-core&#x2F;ppa  3、更新列表 sudo apt update sudo apt install -f sudo apt upgrade  &#x2F;">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-11-29T04:20:49.804Z">
+<meta property="article:modified_time" content="2021-11-29T03:46:31.297Z">
+<meta property="article:author" content="DmzEcho">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.0.1" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.0.1" rel="stylesheet">
+
+<link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="/js/jquery.autocomplete.min.js?v=1.0.1" ></script>
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.0.1" ></script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="false">
+  <input class="theme_blog_path" value="">
+</div>
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/" class="avatar_target">
+    <img class="avatar" src="/img/avatar.jpg" />
+</a>
+<div class="author">
+    <span>DmzEcho</span>
+</div>
+
+<div class="icon">
+    
+        
+        <a title="github" href="https://github.com/Dmzecho" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-github"></use>
+                </svg>
+            
+        </a>
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li><div class="all active">全部文章<small>(19)</small></div></li>
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+    
+    
+    
+    
+    </div>
+    <div><a class="about  site_url"  href="/about">关于</a></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="19">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="back-title-list"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <form onkeydown="if(event.keyCode==13){return false;}">
+        <input class="search" type="text" placeholder="以 in: 开头进行全文搜索" autocomplete="off"id="local-search-input" >
+        <i class="cross"></i>
+        <span>
+            <label for="tagswitch">Tags:</label>
+            <input id="tagswitch" type="checkbox" style="display: none" />
+            <i id="tagsWitchIcon"></i>
+        </span>
+    </form>
+    <div class="tags-list">
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">math</a>
+    </li>
+    
+    <div class="clearfix"></div>
+</div>
+
+    
+    <div id="local-search-result">
+
+    </div>
+    
+    <nav id="title-list-nav">
+        
+        <a  class=""
+           href="/2021/11/29/Hexo%E9%85%8D%E7%BD%AE/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2021-11-29 12:20:49">2021/11/29</span>
+        </a>
+        
+        <a  class=""
+           href="/2021/11/29/Markdown%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2021-11-29 12:20:49">2021/11/29</span>
+        </a>
+        
+        <a  class=""
+           href="/2021/11/18/Matlab-%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%E5%92%8C%E5%B7%B4%E7%89%B9%E6%B2%83%E6%96%AF%E6%BB%A4%E6%B3%A2/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Matlab_傅里叶变换和巴特沃斯滤波">Matlab_傅里叶变换和巴特沃斯滤波</span>
+            <span class="post-date" title="2021-11-18 20:09:51">2021/11/18</span>
+        </a>
+        
+        <a  class=""
+           href="/2021/11/29/Matlab%E5%AD%A6%E4%B9%A0/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2021-11-29 12:20:49">2021/11/29</span>
+        </a>
+        
+        <a  class=""
+           href="/2021/11/29/Python%E5%AD%A6%E4%B9%A0/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2021-11-29 12:20:49">2021/11/29</span>
+        </a>
+        
+        <a  class=""
+           href="/2021/04/15/QT/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="QT">QT</span>
+            <span class="post-date" title="2021-04-15 11:17:02">2021/04/15</span>
+        </a>
+        
+        <a  class=""
+           href="/2021/11/29/ROS%E5%AD%A6%E4%B9%A0/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2021-11-29 12:20:49">2021/11/29</span>
+        </a>
+        
+        <a  class=""
+           href="/2021/11/29/Terminator%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2021-11-29 12:20:49">2021/11/29</span>
+        </a>
+        
+        <a  class=""
+           href="/2021/11/29/Typora%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2021-11-29 12:20:49">2021/11/29</span>
+        </a>
+        
+        <a  class=""
+           href="/2021/11/29/Ubuntu%E5%AD%A6%E4%B9%A0/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2021-11-29 12:20:49">2021/11/29</span>
+        </a>
+        
+        <a  class=""
+           href="/2021/04/11/conda%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="conda简单使用">conda简单使用</span>
+            <span class="post-date" title="2021-04-11 16:21:12">2021/04/11</span>
+        </a>
+        
+        <a  class=""
+           href="/2021/04/14/c++%E8%BF%9B%E9%98%B6/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="c++进阶">c++进阶</span>
+            <span class="post-date" title="2021-04-14 16:53:37">2021/04/14</span>
+        </a>
+        
+        <a  class=""
+           href="/2021/11/29/c++%E5%AD%A6%E4%B9%A0/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2021-11-29 12:20:49">2021/11/29</span>
+        </a>
+        
+        <a  class=""
+           href="/2021/11/19/hexo-d-%E9%83%A8%E7%BD%B2%E6%8A%A5%E9%94%99/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="hexo d 部署报错 ">hexo d 部署报错 </span>
+            <span class="post-date" title="2021-11-19 11:21:02">2021/11/19</span>
+        </a>
+        
+        <a  class=""
+           href="/2021/09/09/ubuntu%E7%B3%BB%E7%BB%9F%E9%94%99%E8%AF%AF%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95%E8%AE%B0%E5%BD%95/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="ubuntu系统错误及解决方法记录">ubuntu系统错误及解决方法记录</span>
+            <span class="post-date" title="2021-09-09 19:19:25">2021/09/09</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/11/02/xx/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="xx">xx</span>
+            <span class="post-date" title="2019-11-02 16:43:17">2019/11/02</span>
+        </a>
+        
+        <a  class=""
+           href="/2020/11/24/%E5%9B%9B%E5%85%83%E6%95%B0/"
+           data-tag="math"
+           data-author="" >
+            <span class="post-title" title="四元数">四元数</span>
+            <span class="post-date" title="2020-11-24 11:50:58">2020/11/24</span>
+        </a>
+        
+        <a  class=""
+           href="/2021/11/29/%E5%9B%9B%E6%9C%88%E8%A3%82%E5%B8%9B%20%20%20%E7%AE%80%E5%AA%9C/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2021-11-29 12:20:49">2021/11/29</span>
+        </a>
+        
+        <a  class=""
+           href="/2021/07/29/%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%AD%A6/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="机器人学">机器人学</span>
+            <span class="post-date" title="2021-07-29 15:29:44">2021/07/29</span>
+        </a>
+        
+    </nav>
+</div>
+    </div>
+    <div class="hide-list">
+        <div class="semicircle">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div class="post">
+    <div class="pjax">
+        <article id="post-ROS学习" class="article article-type-post" itemscope itemprop="blogPost">
+    
+    <div class="article-meta">
+        
+        
+        
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title='更新时间: 2021-11-29 11:46:31'>2021-11-29 12:20</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#ROS%E5%AD%A6%E4%B9%A0"><span class="toc-text">ROS学习</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#rosrun%E5%92%8Croslaunch"><span class="toc-text">rosrun和roslaunch</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8C%85%E7%9A%84%E7%BC%96%E8%AF%91%E5%92%8C%E5%AE%89%E8%A3%85"><span class="toc-text">包的编译和安装</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8rqt%E5%92%8Crqt-plot%E6%8A%A5%E9%94%99"><span class="toc-text">启动rqt和rqt_plot报错</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%A8python%E5%86%99tf%E7%9A%84broadcaster"><span class="toc-text">用python写tf的broadcaster</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%A8python%E5%86%99tf%E7%9A%84listener"><span class="toc-text">用python写tf的listener</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BC%91%E7%9C%A0%E4%B8%8E%E6%97%B6%E9%97%B4"><span class="toc-text">休眠与时间</span></a></li></ol></li></ol></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="ROS学习"><a href="#ROS学习" class="headerlink" title="ROS学习"></a>ROS学习</h1><pre><code>rosnode list #列出活跃的节点信息
+</code></pre>
+<p>​.msg文件就是一个描述ROS中所使用消息类型的简单文本，它放在package的msg目录下，该文件实际上就是每行声明一个数据类型和变量名<br>​ROS客户端库允许使用<strong>不同编程语言</strong>编写的<strong>节点</strong>之间互相通信（即节点的生成形式不受到限制）</p>
+<pre><code>rospy      #python 客户端库
+roscpp     #c++ 客户端库
+</code></pre>
+<h4 id="rosrun和roslaunch"><a href="#rosrun和roslaunch" class="headerlink" title="rosrun和roslaunch"></a>rosrun和roslaunch</h4><p>​rosrun允许你使用包名直接运行<strong>一个</strong>包内的节点(不需要知道这个包具体的路径），但是该ros包需要在终端中能找到（即需要source路径），且一个.py或者.cpp文件（可执行文件）就是一个节点。</p>
+<pre><code>rosrun [package_name] [node_name]
+</code></pre>
+<p>roslaunch可以用来启动定义在launch文件中的<strong>多个</strong>节点</p>
+<pre><code>roslaunch [package] [filename.launch]
+</code></pre>
+<p>rolaunch中启动的不一定要是单个节点，也可以是另一个子launch文件，例如：</p>
+<p><em>启动单个节点（可执行程序）</em></p>
+<pre><code>&lt;node pkg=&quot;franka_control_node&quot; type=&quot;control_node.py&quot; name=&quot;franka_driver&quot; output=&quot;screen&quot;/&gt;
+</code></pre>
+<p><em>启动另一个launch文件，即启动其中的所有节点</em></p>
+<pre><code>&lt;include file=&quot;$(find kinect2_bridge)/launch/kinect2_bridge.launch&quot; /&gt;
+</code></pre>
+<p><strong>机器人gazebo仿真控制     Matlab Simulink工具箱</strong>     <strong>基于模型设计MBD</strong></p>
+<p><strong>基于Matlab/simulink-ros 联合机器人开发</strong></p>
+<pre><code>rosdep install --from-paths src --ignore-src -r -y
+#可以将该工作空间内的所有package的依赖项一起安装
+</code></pre>
+<p><strong>roslaunch时遇到无法定位节点</strong></p>
+<pre><code>ERROR: cannot launch node of type [main_control/position_transform.py]: can&#39;t locate node [position_transform.py] in package [main_control]
+#1、查看是否source路径 2、赋予文件执行权限 sudo chmod +x aaaaaa.py
+</code></pre>
+<h4 id="包的编译和安装"><a href="#包的编译和安装" class="headerlink" title="包的编译和安装"></a>包的编译和安装</h4><pre><code>mkdir build
+cd build
+cmake ..
+make
+sudo make install
+#可以将包安装到/home/xx/.local
+</code></pre>
+<h4 id="启动rqt和rqt-plot报错"><a href="#启动rqt和rqt-plot报错" class="headerlink" title="启动rqt和rqt_plot报错"></a>启动rqt和rqt_plot报错</h4><p>由于matplotlib版本原因启动rqt_plot报错，降级（升级）后仍无效，可考虑卸载qt5再重装<br>    sudo apt remove ros-kinetic-qt5*</p>
+<h4 id="用python写tf的broadcaster"><a href="#用python写tf的broadcaster" class="headerlink" title="用python写tf的broadcaster"></a>用python写tf的broadcaster</h4><pre><code>import tf as tf_ros
+#在回调函数中写
+b1 = tf_ros.TransformBroadcaster()
+b1.sendTransform( (b_point0[0],b_point0[1],b_point0[2] ),
+    tf_ros.transformations.quaternion_from_matrix(T_base_temp),    
+            rospy.Time.now(),
+            &#39;/temp&#39;,
+            &quot;/panda_link0&quot;)
+
+#sendTransform参数为（子坐标系原点在父坐标系的位置，姿态（dx,dy,dz,dw）,时刻，子坐标系名称，父坐标系名称）
+</code></pre>
+<h4 id="用python写tf的listener"><a href="#用python写tf的listener" class="headerlink" title="用python写tf的listener"></a>用python写tf的listener</h4><pre><code>import tf as tf_ros
+listener = tf_ros.TransformListener()
+(trans,rot) = listener.lookupTransform(&#39;/base_link&#39;, &#39;/grasp_frame&#39;, rospy.Time(0))
+#trans为子坐标系原点在父坐标系下的位置，rot为姿态（dx,dy,dz,dw），&#39;/base_link&#39;是父坐标系，&#39;/grasp_frame&#39;是子坐标系，rospy.Time(0)为当前时刻
+</code></pre>
+<h4 id="休眠与时间"><a href="#休眠与时间" class="headerlink" title="休眠与时间"></a>休眠与时间</h4><pre><code>#include &quot;ros/ros.h&quot;
+ros::Duration(2).sleep();   
+## 休眠两秒
+
+uint64_t nsec0 = ros::Time::now().toNSec(); 
+# 获取当前时间（纳秒）
+</code></pre>
+
+      
+       
+    </div>
+</article>
+
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span></p>
+    
+    <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="DmzEcho">DmzEcho</a></p>
+    <p><span class="copy-title">发布时间:</span>2021-11-29, 12:20:49</p>
+    <p><span class="copy-title">最后更新:</span>2021-11-29, 11:46:31</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2021/11/29/ROS%E5%AD%A6%E4%B9%A0/" title="">http://example.com/2021/11/29/ROS%E5%AD%A6%E4%B9%A0/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">©2017 DmzEcho</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full"><span class="min "></span></button>
+<button class="post-toc-menu"><span class="post-toc-menu-icons"></span></button>
+<div class="post-toc"><span class="post-toc-title">目录</span>
+    <div class="post-toc-content">
+
+    </div>
+</div>
+<a class="" id="rocket" href="javascript:void(0)"></a>
+    </div>
+</div>
+<div class="acParent"></div>
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.0.1" ></script>
+
+<script src="/js/script.js?v=1.0.1" ></script>
+<script>
+    var img_resize = 'default';
+    /*作者、标签的自动补全*/
+    $(function () {
+        $('.search').AutoComplete({
+            'data': ['#math',],
+            'itemHeight': 20,
+            'width': 418
+        }).AutoComplete('show');
+    })
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $(".post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+        $('pre code').each(function(){
+            var lines = $(this).text().split('\n').length - 1, widther='';
+            if (lines>99) {
+                widther = 'widther'
+            }
+            var $numbering = $('<ul/>').addClass('pre-numbering ' + widther).attr("unselectable","on");
+            $(this).addClass('has-numbering ' + widther)
+                    .parent()
+                    .append($numbering);
+            for(var i=1;i<=lines;i++){
+                $numbering.append($('<li/>').text(i));
+            }
+        });
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<style>
+    pre{
+        position: relative;
+        margin-bottom: 24px;
+        border-radius: 10px;
+        border: 1px solid #e2dede;
+        background: #FFF;
+        overflow: hidden;
+    }
+    code.has-numbering{
+        margin-left: 30px;
+    }
+    code.has-numbering.widther{
+        margin-left: 35px;
+    }
+    .pre-numbering{
+        margin: 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        padding: 0.5em 3px 0.7em 5px;
+        border-right: 1px solid #C3CCD0;
+        text-align: right;
+        color: #AAA;
+        background-color: #fafafa;
+    }
+    .pre-numbering.widther {
+        width: 35px;
+    }
+</style>
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+        .nav .hide-list.fullscreen {
+            left: 492px
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+    .post .pjax article .article-entry>ol, .post .pjax article .article-entry>ul, .post .pjax article>ol, .post .pjax article>ul{
+        border: #e2dede solid 1px;
+        border-radius: 10px;
+        padding: 10px 32px 10px 56px;
+    }
+    .post .pjax article .article-entry li>ol, .post .pjax article .article-entry li>ul,.post .pjax article li>ol, .post .pjax article li>ul{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .post .pjax article .article-entry>ol>li, .post .pjax article .article-entry>ul>li,.post .pjax article>ol>li, .post .pjax article>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    .post .pjax article .article-entry li>ol>li, .post .pjax article .article-entry li>ul>li,.post .pjax article li>ol>li, .post .pjax article li>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        background: url("https://i.loli.net/2019/07/22/5d3521411f3f169375.png");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>

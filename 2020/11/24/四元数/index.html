@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>四元数 | Hexo</title>
+  <meta name="keywords" content=" math ">
+  <meta name="description" content="四元数 | Hexo">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="Ubuntu学习touch    #新建一个空文件  文件和目录文件——文件 目录——文件夹 git更新至最新版本1、查看git版本 git --version  2、添加Git官方的软件源 sudo add-apt-repository ppa:git-core&#x2F;ppa  3、更新列表 sudo apt update sudo apt install -f sudo apt upgrade  &#x2F;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2021/11/29/Ubuntu%E5%AD%A6%E4%B9%A0/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Ubuntu学习touch    #新建一个空文件  文件和目录文件——文件 目录——文件夹 git更新至最新版本1、查看git版本 git --version  2、添加Git官方的软件源 sudo add-apt-repository ppa:git-core&#x2F;ppa  3、更新列表 sudo apt update sudo apt install -f sudo apt upgrade  &#x2F;">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-11-29T04:20:49.804Z">
+<meta property="article:modified_time" content="2021-11-29T03:46:31.297Z">
+<meta property="article:author" content="DmzEcho">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.0.1" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.0.1" rel="stylesheet">
+
+<link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="/js/jquery.autocomplete.min.js?v=1.0.1" ></script>
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.0.1" ></script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="false">
+  <input class="theme_blog_path" value="">
+</div>
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/" class="avatar_target">
+    <img class="avatar" src="/img/avatar.jpg" />
+</a>
+<div class="author">
+    <span>DmzEcho</span>
+</div>
+
+<div class="icon">
+    
+        
+        <a title="github" href="https://github.com/Dmzecho" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-github"></use>
+                </svg>
+            
+        </a>
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li><div class="all active">全部文章<small>(19)</small></div></li>
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+    
+    
+    
+    
+    </div>
+    <div><a class="about  site_url"  href="/about">关于</a></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="19">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="back-title-list"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <form onkeydown="if(event.keyCode==13){return false;}">
+        <input class="search" type="text" placeholder="以 in: 开头进行全文搜索" autocomplete="off"id="local-search-input" >
+        <i class="cross"></i>
+        <span>
+            <label for="tagswitch">Tags:</label>
+            <input id="tagswitch" type="checkbox" style="display: none" />
+            <i id="tagsWitchIcon"></i>
+        </span>
+    </form>
+    <div class="tags-list">
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">math</a>
+    </li>
+    
+    <div class="clearfix"></div>
+</div>
+
+    
+    <div id="local-search-result">
+
+    </div>
+    
+    <nav id="title-list-nav">
+        
+        <a  class=""
+           href="/2021/11/29/Hexo%E9%85%8D%E7%BD%AE/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2021-11-29 12:20:49">2021/11/29</span>
+        </a>
+        
+        <a  class=""
+           href="/2021/11/29/Markdown%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2021-11-29 12:20:49">2021/11/29</span>
+        </a>
+        
+        <a  class=""
+           href="/2021/11/18/Matlab-%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%E5%92%8C%E5%B7%B4%E7%89%B9%E6%B2%83%E6%96%AF%E6%BB%A4%E6%B3%A2/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Matlab_傅里叶变换和巴特沃斯滤波">Matlab_傅里叶变换和巴特沃斯滤波</span>
+            <span class="post-date" title="2021-11-18 20:09:51">2021/11/18</span>
+        </a>
+        
+        <a  class=""
+           href="/2021/11/29/Matlab%E5%AD%A6%E4%B9%A0/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2021-11-29 12:20:49">2021/11/29</span>
+        </a>
+        
+        <a  class=""
+           href="/2021/11/29/Python%E5%AD%A6%E4%B9%A0/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2021-11-29 12:20:49">2021/11/29</span>
+        </a>
+        
+        <a  class=""
+           href="/2021/04/15/QT/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="QT">QT</span>
+            <span class="post-date" title="2021-04-15 11:17:02">2021/04/15</span>
+        </a>
+        
+        <a  class=""
+           href="/2021/11/29/ROS%E5%AD%A6%E4%B9%A0/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2021-11-29 12:20:49">2021/11/29</span>
+        </a>
+        
+        <a  class=""
+           href="/2021/11/29/Terminator%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2021-11-29 12:20:49">2021/11/29</span>
+        </a>
+        
+        <a  class=""
+           href="/2021/11/29/Typora%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2021-11-29 12:20:49">2021/11/29</span>
+        </a>
+        
+        <a  class=""
+           href="/2021/11/29/Ubuntu%E5%AD%A6%E4%B9%A0/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2021-11-29 12:20:49">2021/11/29</span>
+        </a>
+        
+        <a  class=""
+           href="/2021/04/11/conda%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="conda简单使用">conda简单使用</span>
+            <span class="post-date" title="2021-04-11 16:21:12">2021/04/11</span>
+        </a>
+        
+        <a  class=""
+           href="/2021/04/14/c++%E8%BF%9B%E9%98%B6/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="c++进阶">c++进阶</span>
+            <span class="post-date" title="2021-04-14 16:53:37">2021/04/14</span>
+        </a>
+        
+        <a  class=""
+           href="/2021/11/29/c++%E5%AD%A6%E4%B9%A0/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2021-11-29 12:20:49">2021/11/29</span>
+        </a>
+        
+        <a  class=""
+           href="/2021/11/19/hexo-d-%E9%83%A8%E7%BD%B2%E6%8A%A5%E9%94%99/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="hexo d 部署报错 ">hexo d 部署报错 </span>
+            <span class="post-date" title="2021-11-19 11:21:02">2021/11/19</span>
+        </a>
+        
+        <a  class=""
+           href="/2021/09/09/ubuntu%E7%B3%BB%E7%BB%9F%E9%94%99%E8%AF%AF%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95%E8%AE%B0%E5%BD%95/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="ubuntu系统错误及解决方法记录">ubuntu系统错误及解决方法记录</span>
+            <span class="post-date" title="2021-09-09 19:19:25">2021/09/09</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/11/02/xx/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="xx">xx</span>
+            <span class="post-date" title="2019-11-02 16:43:17">2019/11/02</span>
+        </a>
+        
+        <a  class=""
+           href="/2020/11/24/%E5%9B%9B%E5%85%83%E6%95%B0/"
+           data-tag="math"
+           data-author="" >
+            <span class="post-title" title="四元数">四元数</span>
+            <span class="post-date" title="2020-11-24 11:50:58">2020/11/24</span>
+        </a>
+        
+        <a  class=""
+           href="/2021/11/29/%E5%9B%9B%E6%9C%88%E8%A3%82%E5%B8%9B%20%20%20%E7%AE%80%E5%AA%9C/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2021-11-29 12:20:49">2021/11/29</span>
+        </a>
+        
+        <a  class=""
+           href="/2021/07/29/%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%AD%A6/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="机器人学">机器人学</span>
+            <span class="post-date" title="2021-07-29 15:29:44">2021/07/29</span>
+        </a>
+        
+    </nav>
+</div>
+    </div>
+    <div class="hide-list">
+        <div class="semicircle">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div class="post">
+    <div class="pjax">
+        <article id="post-四元数" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">四元数</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        
+        <span class="tag">
+            
+            <a href="javascript:" class="color5">math</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title='更新时间: 2021-11-29 11:46:31'>2020-11-24 11:50</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9B%E5%85%83%E6%95%B0%E4%B8%8E%E6%97%8B%E8%BD%AC%E7%9F%A9%E9%98%B5"><span class="toc-text">四元数与旋转矩阵</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E5%85%83%E6%95%B0%E4%B9%98%E6%B3%95python"><span class="toc-text">四元数乘法python</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%B2%E7%9F%A5%E6%9C%AB%E7%AB%AF%E5%A7%BF%E6%80%81%E7%9A%84%E5%9B%9B%E5%85%83%E6%95%B0%E8%A1%A8%E7%A4%BA%EF%BC%8C%E6%B1%82%E6%9C%AB%E7%AB%AFz%E8%BD%B4%E7%9A%84%E5%90%91%E9%87%8F%E8%A1%A8%E7%A4%BA"><span class="toc-text">已知末端姿态的四元数表示，求末端z轴的向量表示</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%B2%E7%9F%A5%E6%9C%AB%E7%AB%AF%E5%A7%BF%E6%80%81%EF%BC%8C%E6%B1%82%E7%BB%95z%E8%BD%B4%E6%97%8B%E8%BD%AC120%E5%BA%A6%E7%9A%84%E6%96%B0%E5%A7%BF%E6%80%81"><span class="toc-text">已知末端姿态，求绕z轴旋转120度的新姿态</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%9D%E8%B7%AF1-%E9%80%9A%E8%BF%87%E9%BD%90%E6%AC%A1%E6%97%8B%E8%BD%AC%E7%9F%A9%E9%98%B5%E9%97%B4%E6%8E%A5%E8%BD%AC%E5%8C%96"><span class="toc-text">思路1 通过齐次旋转矩阵间接转化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%9D%E8%B7%AF%E4%BA%8C-%E5%9B%9B%E5%85%83%E6%95%B0%E4%B9%98%E6%B3%95%E7%9B%B4%E6%8E%A5%E8%AE%A1%E7%AE%97"><span class="toc-text">思路二 四元数乘法直接计算</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E5%85%83%E6%95%B0%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F"><span class="toc-text">四元数计算公式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%9B%E5%85%83%E6%95%B0%E4%B9%98%E6%B3%95"><span class="toc-text">四元数乘法</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E5%85%83%E6%95%B0%E8%B7%9D%E7%A6%BB"><span class="toc-text">四元数距离</span></a></li></ol></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="四元数与旋转矩阵"><a href="#四元数与旋转矩阵" class="headerlink" title="四元数与旋转矩阵"></a>四元数与旋转矩阵</h1><p>部分摘自 <a target="_blank" rel="noopener" href="https://krasjet.github.io/quaternion/quaternion.pdf">https://krasjet.github.io/quaternion/quaternion.pdf</a><br>        里面对四元数和3D旋转的关系以及四元数乘法运算讲得很详细</p>
+<p>四元数的介绍视频 <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1SW411y7W1">https://www.bilibili.com/video/BV1SW411y7W1</a><br><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Lt411U7og">https://www.bilibili.com/video/BV1Lt411U7og</a></p>
+<h3 id="四元数乘法python"><a href="#四元数乘法python" class="headerlink" title="四元数乘法python"></a>四元数乘法python</h3><pre><code>import numpy as np
+
+def qua_multi(qa,qb,m):
+        #qa,qb均为四元数,[x,y,z,w],实轴在最后
+    if(m==0):        #qb左乘qa
+        qa_m=[[qa[3],-qa[2],qa[1],qa[0]],
+        [qa[2],qa[3],-qa[0],qa[1]],
+        [-qa[1],qa[0],qa[3],qa[2]],
+        [-qa[0],-qa[1],-qa[2],qa[3]]]   
+
+        qc=np.matmul(qa_m,qb)
+
+    if(m==1):      
+        #qb右乘qa
+        qa_m=[[qa[3],qa[2],-qa[1],qa[0]],
+        [-qa[2],qa[3],qa[0],qa[1]],
+        [qa[1],-qa[0],qa[3],qa[2]],
+        [-qa[0],-qa[1],-qa[2],qa[3]]]
+        qc=np.matmul(qa_m,qb)
+    return qc
+</code></pre>
+<h3 id="已知末端姿态的四元数表示，求末端z轴的向量表示"><a href="#已知末端姿态的四元数表示，求末端z轴的向量表示" class="headerlink" title="已知末端姿态的四元数表示，求末端z轴的向量表示"></a>已知末端姿态的四元数表示，求末端z轴的向量表示</h3><pre><code>#设姿态为q0(x,y,z,w),思路是[0,0,1]左乘q0,右乘q0的逆
+q1=[0,0,1,0]
+q2=qua_multi(q0,q1,0)     #q1左乘q0
+q0_0=[-q0[0],-q0[1],-q0[2],q0[3]]
+q3=qua_multi(q0_0,q2,1)    #右乘q0的逆，前提是将q0转化成单位四元数，否则求逆时还要在共轭的基础上除以模长的平方
+</code></pre>
+<h3 id="已知末端姿态，求绕z轴旋转120度的新姿态"><a href="#已知末端姿态，求绕z轴旋转120度的新姿态" class="headerlink" title="已知末端姿态，求绕z轴旋转120度的新姿态"></a>已知末端姿态，求绕z轴旋转120度的新姿态</h3><pre><code>末端姿态四元数均是在基座标系下的表示，而z轴是动系的坐标轴
+</code></pre>
+<h4 id="思路1-通过齐次旋转矩阵间接转化"><a href="#思路1-通过齐次旋转矩阵间接转化" class="headerlink" title="思路1 通过齐次旋转矩阵间接转化"></a>思路1 通过齐次旋转矩阵间接转化</h4><pre><code>def matrix_from_quaternion(quaternion, pos=None):
+        #由四元数返回齐次旋转矩阵
+    q = np.array(quaternion, dtype=np.float64, copy=True)
+    q = q[[3, 0, 1, 2]]
+
+    if pos is None: pos = np.zeros(3)
+
+    n = np.dot(q, q)
+    if n &lt; 1e-20:
+        return np.identity(4)
+    q *= np.sqrt(2.0 / n)
+    q = np.outer(q, q)
+    return np.array([
+        [1.0 - q[2, 2] - q[3, 3], q[1, 2] - q[3, 0], q[1, 3] + q[2, 0], pos[0]],
+        [q[1, 2] + q[3, 0], 1.0 - q[1, 1] - q[3, 3], q[2, 3] - q[1, 0], pos[1]],
+        [q[1, 3] - q[2, 0], q[2, 3] + q[1, 0], 1.0 - q[1, 1] - q[2, 2], pos[2]],
+        [0.0, 0.0, 0.0, 1.0]])
+
+def quaternion_from_matrix(matrix, isprecise=False):
+    #旋转矩阵转四元数
+    &quot;&quot;&quot;
+    LAYOUT : [X, Y, Z, W]
+
+    If isprecise is True, the input matrix is assumed to be a precise rotation
+    matrix and a faster algorithm is used.
+    &quot;&quot;&quot;
+    M = np.array(matrix, dtype=np.float64, copy=False)[:4, :4]
+    if isprecise:
+        q = np.empty((4,))
+        t = np.trace(M)
+        if t &gt; M[3, 3]:
+            q[0] = t
+            q[3] = M[1, 0] - M[0, 1]
+            q[2] = M[0, 2] - M[2, 0]
+            q[1] = M[2, 1] - M[1, 2]
+        else:
+            i, j, k = 1, 2, 3
+            if M[1, 1] &gt; M[0, 0]:
+                i, j, k = 2, 3, 1
+            if M[2, 2] &gt; M[i, i]:
+                i, j, k = 3, 1, 2
+            t = M[i, i] - (M[j, j] + M[k, k]) + M[3, 3]
+            q[i] = t
+            q[j] = M[i, j] + M[j, i]
+            q[k] = M[k, i] + M[i, k]
+            q[3] = M[k, j] - M[j, k]
+        q *= 0.5 / np.sqrt(t * M[3, 3])
+    else:
+        m00 = M[0, 0]
+        m01 = M[0, 1]
+        m02 = M[0, 2]
+        m10 = M[1, 0]
+        m11 = M[1, 1]
+        m12 = M[1, 2]
+        m20 = M[2, 0]
+        m21 = M[2, 1]
+        m22 = M[2, 2]
+        # symmetric matrix K
+        K = np.array([[m00 - m11 - m22, 0.0, 0.0, 0.0],
+                    [m01 + m10, m11 - m00 - m22, 0.0, 0.0],
+                    [m02 + m20, m12 + m21, m22 - m00 - m11, 0.0],
+                    [m21 - m12, m02 - m20, m10 - m01, m00 + m11 + m22]])
+        K /= 3.0
+        # quaternion is eigenvector of K that corresponds to largest eigenvalue
+        w, V = np.linalg.eigh(K)  #特征值和特征向量
+        q = V[:, np.argmax(w)]
+        if q[0] &lt; 0.0:
+            np.negative(q, q)
+    return q
+
+def go_to_orien(a): 
+    #a为旋转的角度，q0为现在的姿态（四元数[x,y,z,w]）
+    q0_now= quaternion.matrix_from_quaternion(q0)    #将现在姿态四元数转换成旋转矩阵
+    matri_qd=[[math.cos(a*math.pi/180),-math.sin(a*math.pi/180),0,0],[math.sin(a*math.pi/180),math.cos(a*math.pi/180),0,0],[0,0,1,0],[0,0,0,1]]     #由给定角度计算齐次旋转矩阵
+    qd_m= np.matmul(q0_now, matri_qd)     #绕动系坐标轴旋转，右乘
+    qd = quaternion.quaternion_from_matrix(qd_m)   #得到目标姿态四元数
+</code></pre>
+<h4 id="思路二-四元数乘法直接计算"><a href="#思路二-四元数乘法直接计算" class="headerlink" title="思路二 四元数乘法直接计算"></a>思路二 四元数乘法直接计算</h4><pre><code>def go_to_orien_test(a): 
+    #a为旋转的角度，q0为现在的姿态（四元数[x,y,z,w]）
+
+    q1=[0,0,1,0]
+    q0=x0[3:]
+    q2=qua_multi(q0,q1,0)
+    q0_0=[-q0[0],-q0[1],-q0[2],q0[3]]
+    q3=qua_multi(q0_0,q2,1)
+    #得到现在的z轴在基座标系下的四元数表示[i,j,k,0]
+
+    q1= np.empty((4,))
+    q1[0]=math.sin(a*math.pi/180/2)*q3[0]
+    q1[1]=math.sin(a*math.pi/180/2)*q3[1]
+    q1[2]=math.sin(a*math.pi/180/2)*q3[2]
+    q1[3]=math.cos(a*math.pi/180/2)               #绕z轴旋转a度的四元数表示 cos(theta/2)+sin(theta/2)(b*i+c*j+d*k)
+
+    qd=qua_multi(q1,q0,0)       #只用左乘q1即可得到新的姿态四元数，一个点左乘q右乘q逆是得到点新的坐标（一定是纯四元数）
+</code></pre>
+<h3 id="四元数计算公式"><a href="#四元数计算公式" class="headerlink" title="四元数计算公式"></a>四元数计算公式</h3><h4 id="四元数乘法"><a href="#四元数乘法" class="headerlink" title="四元数乘法"></a>四元数乘法</h4><p>$$<br>q_{1}=a+b i+c j+d k, \quad q_{2}=e+f i+g j+h k<br>$$<br>q2左乘q1<br>$$<br>q_{1} q_{2}=\left[\begin{array}{cccc}<br>a &amp; -b &amp; -c &amp; -d \\<br>b &amp; a &amp; -d &amp; c \\<br>c &amp; d &amp; a &amp; -b \\<br>d &amp; -c &amp; b &amp; a<br>\end{array}\right]\left[\begin{array}{l}<br>e \\<br>f \\<br>g \\<br>h<br>\end{array}\right]<br>$$<br>q2右乘q1<br>$$<br>q_{2} q_{1}=\left[\begin{array}{cccc}<br>a &amp; -b &amp; -c &amp; -d \\<br>b &amp; a &amp; d &amp; -c \\<br>c &amp; -d &amp; a &amp; b \\<br>d &amp; c &amp; -b &amp; a<br>\end{array}\right]\left[\begin{array}{l}<br>e \\<br>f \\<br>g \\<br>h<br>\end{array}\right]<br>$$</p>
+<h3 id="四元数距离"><a href="#四元数距离" class="headerlink" title="四元数距离"></a>四元数距离</h3><p>为实现姿态的优化和距离度量，需将四元数表达为三维笛卡尔空间的向量。将四元数q在无旋转四元数qI= [1, 0, 0, 0](identity quaternion)的切平面投影定义为四元数的对数</p>
+<p><img src="https://gitee.com/dmzecho/dmzecho.gitee.io/raw/master/log_qua.jpg" alt="log_qua" title="log_qua"></p>
+<p>其中acos为修正后的反余弦函数:</p>
+<p><img src="https://gitee.com/dmzecho/dmzecho.gitee.io/raw/master/arcos.jpg" alt="arcos" title="arcos"></p>
+<p>一般基于四元数之间的距离设计目标函数，两个四元数q0和q1之间的距离定义为：</p>
+<p><img src="https://gitee.com/dmzecho/dmzecho.gitee.io/raw/master/dis_qua.jpg" alt="dis_qua" title="dis_qua"></p>
+<pre><code>计算两个四元数之间的距离,python代码如下:
+# 两四元数测地线角度,[0,pi]
+def judge_qua_close(q0,q1):
+    #input   q0,q1  (x,y,z,w)
+    q11 = np.array([-q1[0],-q1[1],-q1[2],q1[3]])   #q1的逆
+    mul = qua_multi(q11,q0,0)    #  q0 * q1逆
+    logq = qua_log(mul)
+    dis_qua = np.linalg.norm(logq) *2.0
+    return dis_qua
+
+def qua_multi(qa,qb,m):
+    #qa,qb均为四元数,[x,y,z,w],实轴在最后
+    if(m==0):        
+        #qb左乘qa
+        qa_m=[[qa[3],-qa[2],qa[1],qa[0]],
+        [qa[2],qa[3],-qa[0],qa[1]],
+        [-qa[1],qa[0],qa[3],qa[2]],
+        [-qa[0],-qa[1],-qa[2],qa[3]]]   
+        qc=np.matmul(qa_m,qb)
+
+    if(m==1):      
+        #qb右乘qa
+        qa_m=[[qa[3],qa[2],-qa[1],qa[0]],
+        [-qa[2],qa[3],qa[0],qa[1]],
+        [qa[1],-qa[0],qa[3],qa[2]],
+        [-qa[0],-qa[1],-qa[2],qa[3]]]
+        qc=np.matmul(qa_m,qb)
+    return qc
+
+def qua_log(q0):
+    #定义四元数的对数:
+        # q在无旋转四元数[0,0,0,1]的切平面的投影定义为四元数的对数
+        # input q(4,)  四元数 x y z w
+        # output log(q) (3,)
+    qv = np.array([q0[0],q0[1],q0[2]])
+
+    logq  =np.zeros((3,))
+    if (q0[0]**2+q0[1]**2+q0[2]**2) &lt;1e-5:
+        logq = np.zeros((3,))
+    else:
+        if q0[-1]&lt;0 and q0[-1]&gt;=-1:
+            logq = (math.acos(q0[-1])-math.pi)*qv/np.linalg.norm(qv)
+        if q0[-1]&lt;=1 and q0[-1]&gt;=0:
+            logq = math.acos(q0[-1])*qv/np.linalg.norm(qv)
+    return logq
+</code></pre>
+
+      
+       
+    </div>
+</article>
+
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>四元数</p>
+    
+    <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="DmzEcho">DmzEcho</a></p>
+    <p><span class="copy-title">发布时间:</span>2020-11-24, 11:50:58</p>
+    <p><span class="copy-title">最后更新:</span>2021-11-29, 11:46:31</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/11/24/%E5%9B%9B%E5%85%83%E6%95%B0/" title="四元数">http://example.com/2020/11/24/%E5%9B%9B%E5%85%83%E6%95%B0/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+
+
+
+    
+        <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+        preferredFont: "TeX",
+        availableFonts: ["STIX","TeX"],
+        linebreaks: { automatic:true },
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+        processEscapes: true,
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+    });
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async
+        src="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<input type="hidden" id="MathJax-js"
+        value="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</input>
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">©2017 DmzEcho</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full"><span class="min "></span></button>
+<button class="post-toc-menu"><span class="post-toc-menu-icons"></span></button>
+<div class="post-toc"><span class="post-toc-title">目录</span>
+    <div class="post-toc-content">
+
+    </div>
+</div>
+<a class="" id="rocket" href="javascript:void(0)"></a>
+    </div>
+</div>
+<div class="acParent"></div>
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.0.1" ></script>
+
+<script src="/js/script.js?v=1.0.1" ></script>
+<script>
+    var img_resize = 'default';
+    /*作者、标签的自动补全*/
+    $(function () {
+        $('.search').AutoComplete({
+            'data': ['#math',],
+            'itemHeight': 20,
+            'width': 418
+        }).AutoComplete('show');
+    })
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $(".post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+        $('pre code').each(function(){
+            var lines = $(this).text().split('\n').length - 1, widther='';
+            if (lines>99) {
+                widther = 'widther'
+            }
+            var $numbering = $('<ul/>').addClass('pre-numbering ' + widther).attr("unselectable","on");
+            $(this).addClass('has-numbering ' + widther)
+                    .parent()
+                    .append($numbering);
+            for(var i=1;i<=lines;i++){
+                $numbering.append($('<li/>').text(i));
+            }
+        });
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<style>
+    pre{
+        position: relative;
+        margin-bottom: 24px;
+        border-radius: 10px;
+        border: 1px solid #e2dede;
+        background: #FFF;
+        overflow: hidden;
+    }
+    code.has-numbering{
+        margin-left: 30px;
+    }
+    code.has-numbering.widther{
+        margin-left: 35px;
+    }
+    .pre-numbering{
+        margin: 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        padding: 0.5em 3px 0.7em 5px;
+        border-right: 1px solid #C3CCD0;
+        text-align: right;
+        color: #AAA;
+        background-color: #fafafa;
+    }
+    .pre-numbering.widther {
+        width: 35px;
+    }
+</style>
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+        .nav .hide-list.fullscreen {
+            left: 492px
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+    .post .pjax article .article-entry>ol, .post .pjax article .article-entry>ul, .post .pjax article>ol, .post .pjax article>ul{
+        border: #e2dede solid 1px;
+        border-radius: 10px;
+        padding: 10px 32px 10px 56px;
+    }
+    .post .pjax article .article-entry li>ol, .post .pjax article .article-entry li>ul,.post .pjax article li>ol, .post .pjax article li>ul{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .post .pjax article .article-entry>ol>li, .post .pjax article .article-entry>ul>li,.post .pjax article>ol>li, .post .pjax article>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    .post .pjax article .article-entry li>ol>li, .post .pjax article .article-entry li>ul>li,.post .pjax article li>ol>li, .post .pjax article li>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        background: url("https://i.loli.net/2019/07/22/5d3521411f3f169375.png");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>

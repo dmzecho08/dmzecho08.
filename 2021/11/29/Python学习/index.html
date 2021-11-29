@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Hexo</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="Hexo">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="Ubuntu学习touch    #新建一个空文件  文件和目录文件——文件 目录——文件夹 git更新至最新版本1、查看git版本 git --version  2、添加Git官方的软件源 sudo add-apt-repository ppa:git-core&#x2F;ppa  3、更新列表 sudo apt update sudo apt install -f sudo apt upgrade  &#x2F;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2021/11/29/Ubuntu%E5%AD%A6%E4%B9%A0/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Ubuntu学习touch    #新建一个空文件  文件和目录文件——文件 目录——文件夹 git更新至最新版本1、查看git版本 git --version  2、添加Git官方的软件源 sudo add-apt-repository ppa:git-core&#x2F;ppa  3、更新列表 sudo apt update sudo apt install -f sudo apt upgrade  &#x2F;">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-11-29T04:20:49.804Z">
+<meta property="article:modified_time" content="2021-11-29T03:46:31.297Z">
+<meta property="article:author" content="DmzEcho">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.0.1" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.0.1" rel="stylesheet">
+
+<link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="/js/jquery.autocomplete.min.js?v=1.0.1" ></script>
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.0.1" ></script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="false">
+  <input class="theme_blog_path" value="">
+</div>
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/" class="avatar_target">
+    <img class="avatar" src="/img/avatar.jpg" />
+</a>
+<div class="author">
+    <span>DmzEcho</span>
+</div>
+
+<div class="icon">
+    
+        
+        <a title="github" href="https://github.com/Dmzecho" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-github"></use>
+                </svg>
+            
+        </a>
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li><div class="all active">全部文章<small>(19)</small></div></li>
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+    
+    
+    
+    
+    </div>
+    <div><a class="about  site_url"  href="/about">关于</a></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="19">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="back-title-list"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <form onkeydown="if(event.keyCode==13){return false;}">
+        <input class="search" type="text" placeholder="以 in: 开头进行全文搜索" autocomplete="off"id="local-search-input" >
+        <i class="cross"></i>
+        <span>
+            <label for="tagswitch">Tags:</label>
+            <input id="tagswitch" type="checkbox" style="display: none" />
+            <i id="tagsWitchIcon"></i>
+        </span>
+    </form>
+    <div class="tags-list">
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">math</a>
+    </li>
+    
+    <div class="clearfix"></div>
+</div>
+
+    
+    <div id="local-search-result">
+
+    </div>
+    
+    <nav id="title-list-nav">
+        
+        <a  class=""
+           href="/2021/11/29/Hexo%E9%85%8D%E7%BD%AE/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2021-11-29 12:20:49">2021/11/29</span>
+        </a>
+        
+        <a  class=""
+           href="/2021/11/29/Markdown%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2021-11-29 12:20:49">2021/11/29</span>
+        </a>
+        
+        <a  class=""
+           href="/2021/11/18/Matlab-%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%E5%92%8C%E5%B7%B4%E7%89%B9%E6%B2%83%E6%96%AF%E6%BB%A4%E6%B3%A2/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Matlab_傅里叶变换和巴特沃斯滤波">Matlab_傅里叶变换和巴特沃斯滤波</span>
+            <span class="post-date" title="2021-11-18 20:09:51">2021/11/18</span>
+        </a>
+        
+        <a  class=""
+           href="/2021/11/29/Matlab%E5%AD%A6%E4%B9%A0/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2021-11-29 12:20:49">2021/11/29</span>
+        </a>
+        
+        <a  class=""
+           href="/2021/11/29/Python%E5%AD%A6%E4%B9%A0/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2021-11-29 12:20:49">2021/11/29</span>
+        </a>
+        
+        <a  class=""
+           href="/2021/04/15/QT/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="QT">QT</span>
+            <span class="post-date" title="2021-04-15 11:17:02">2021/04/15</span>
+        </a>
+        
+        <a  class=""
+           href="/2021/11/29/ROS%E5%AD%A6%E4%B9%A0/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2021-11-29 12:20:49">2021/11/29</span>
+        </a>
+        
+        <a  class=""
+           href="/2021/11/29/Terminator%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2021-11-29 12:20:49">2021/11/29</span>
+        </a>
+        
+        <a  class=""
+           href="/2021/11/29/Typora%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2021-11-29 12:20:49">2021/11/29</span>
+        </a>
+        
+        <a  class=""
+           href="/2021/11/29/Ubuntu%E5%AD%A6%E4%B9%A0/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2021-11-29 12:20:49">2021/11/29</span>
+        </a>
+        
+        <a  class=""
+           href="/2021/04/11/conda%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="conda简单使用">conda简单使用</span>
+            <span class="post-date" title="2021-04-11 16:21:12">2021/04/11</span>
+        </a>
+        
+        <a  class=""
+           href="/2021/04/14/c++%E8%BF%9B%E9%98%B6/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="c++进阶">c++进阶</span>
+            <span class="post-date" title="2021-04-14 16:53:37">2021/04/14</span>
+        </a>
+        
+        <a  class=""
+           href="/2021/11/29/c++%E5%AD%A6%E4%B9%A0/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2021-11-29 12:20:49">2021/11/29</span>
+        </a>
+        
+        <a  class=""
+           href="/2021/11/19/hexo-d-%E9%83%A8%E7%BD%B2%E6%8A%A5%E9%94%99/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="hexo d 部署报错 ">hexo d 部署报错 </span>
+            <span class="post-date" title="2021-11-19 11:21:02">2021/11/19</span>
+        </a>
+        
+        <a  class=""
+           href="/2021/09/09/ubuntu%E7%B3%BB%E7%BB%9F%E9%94%99%E8%AF%AF%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95%E8%AE%B0%E5%BD%95/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="ubuntu系统错误及解决方法记录">ubuntu系统错误及解决方法记录</span>
+            <span class="post-date" title="2021-09-09 19:19:25">2021/09/09</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/11/02/xx/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="xx">xx</span>
+            <span class="post-date" title="2019-11-02 16:43:17">2019/11/02</span>
+        </a>
+        
+        <a  class=""
+           href="/2020/11/24/%E5%9B%9B%E5%85%83%E6%95%B0/"
+           data-tag="math"
+           data-author="" >
+            <span class="post-title" title="四元数">四元数</span>
+            <span class="post-date" title="2020-11-24 11:50:58">2020/11/24</span>
+        </a>
+        
+        <a  class=""
+           href="/2021/11/29/%E5%9B%9B%E6%9C%88%E8%A3%82%E5%B8%9B%20%20%20%E7%AE%80%E5%AA%9C/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title=""></span>
+            <span class="post-date" title="2021-11-29 12:20:49">2021/11/29</span>
+        </a>
+        
+        <a  class=""
+           href="/2021/07/29/%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%AD%A6/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="机器人学">机器人学</span>
+            <span class="post-date" title="2021-07-29 15:29:44">2021/07/29</span>
+        </a>
+        
+    </nav>
+</div>
+    </div>
+    <div class="hide-list">
+        <div class="semicircle">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div class="post">
+    <div class="pjax">
+        <article id="post-Python学习" class="article article-type-post" itemscope itemprop="blogPost">
+    
+    <div class="article-meta">
+        
+        
+        
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title='更新时间: 2021-11-29 11:46:31'>2021-11-29 12:20</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Python%E5%AD%A6%E4%B9%A0"><span class="toc-text">Python学习</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">基本数据类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%97%E8%A1%A8%E8%B5%8B%E5%80%BC"><span class="toc-text">列表赋值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%83%E7%BB%84%E5%92%8C%E5%88%97%E8%A1%A8"><span class="toc-text">元组和列表</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BE%AA%E7%8E%AF%E5%B5%8C%E5%A5%97"><span class="toc-text">循环嵌套</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B7%B1%E6%8B%B7%E8%B4%9D%E4%B8%8E%E6%B5%85%E6%8B%B7%E8%B4%9D"><span class="toc-text">深拷贝与浅拷贝</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A9%BA%E9%97%B4%E4%B8%A4%E7%82%B9%E9%97%B4%E6%AC%A7%E6%B0%8F%E8%B7%9D%E7%A6%BB%E8%AE%A1%E7%AE%97"><span class="toc-text">空间两点间欧氏距离计算</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%90%91txt%E6%96%87%E4%BB%B6%E4%B8%AD%E5%86%99%E5%85%A5%E5%8F%98%E9%87%8F%E5%80%BC"><span class="toc-text">向txt文件中写入变量值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%8Etxt%E6%96%87%E4%BB%B6%E4%B8%AD%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE"><span class="toc-text">从txt文件中读取数据</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#python%E7%94%BB%E5%9B%BE"><span class="toc-text">python画图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#numpy%E6%A8%A1%E5%9D%97%E5%B8%B8%E7%94%A8%E7%9A%84%E7%9F%A9%E9%98%B5%E5%87%BD%E6%95%B0"><span class="toc-text">numpy模块常用的矩阵函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E7%9A%84%E7%9F%A9%E9%98%B5%E7%BB%B4%E5%BA%A6%E5%8F%98%E6%8D%A2%E5%87%BD%E6%95%B0"><span class="toc-text">常用的矩阵维度变换函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%8B%BC%E6%8E%A5"><span class="toc-text">字符串的拼接</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%87%BA"><span class="toc-text">格式化输出</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#elif"><span class="toc-text">elif</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%AB%E5%B0%BE%E5%8F%96%E6%B6%88%E6%8D%A2%E8%A1%8C%E5%92%8C%E8%BF%BD%E5%8A%A0%E6%8D%A2%E8%A1%8C"><span class="toc-text">末尾取消换行和追加换行</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A8%A1%E5%9D%97"><span class="toc-text">模块</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%97%E8%A1%A8"><span class="toc-text">列表</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%97%E8%A1%A8%E7%9A%84%E5%A2%9E%E3%80%81%E5%88%A0%E3%80%81%E6%94%B9%E3%80%81%E6%9F%A5%E3%80%81%E9%95%BF%E5%BA%A6"><span class="toc-text">列表的增、删、改、查、长度</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#python%E4%B8%AD%E7%9A%84%E5%BC%95%E5%8F%B7"><span class="toc-text">python中的引号</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E4%B8%8E%E6%96%B9%E6%B3%95"><span class="toc-text">函数与方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%97%E8%A1%A8%E5%80%92%E5%BA%8F%E6%8E%92%E5%88%97"><span class="toc-text">列表倒序排列</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%97%E8%A1%A8%E7%9A%84%E5%8D%87%E5%BA%8F%E5%92%8C%E9%99%8D%E5%BA%8F"><span class="toc-text">列表的升序和降序</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%97%E8%A1%A8%E9%81%8D%E5%8E%86"><span class="toc-text">列表遍历</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%97%E8%A1%A8%E7%9A%84"><span class="toc-text">列表的+&#x3D;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%83%E7%BB%84%E4%B8%8E%E5%88%97%E8%A1%A8"><span class="toc-text">元组与列表</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%9B%B8%E4%BA%92%E8%BD%AC%E6%8D%A2"><span class="toc-text">相互转换</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%97%E5%85%B8"><span class="toc-text">字典</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%97%E5%85%B8%E7%9A%84%E5%90%88%E5%B9%B6"><span class="toc-text">字典的合并</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%97%E5%85%B8%E7%9A%84%E9%81%8D%E5%8E%86"><span class="toc-text">字典的遍历</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%97%E5%85%B8%E5%81%9A%E5%88%97%E8%A1%A8%E5%85%83%E7%B4%A0"><span class="toc-text">字典做列表元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%88%86%E5%89%B2-split"><span class="toc-text">字符串的分割(.split)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%83%E7%B4%A0%E6%8B%BC%E6%88%90%E5%AD%97%E7%AC%A6%E4%B8%B2-join"><span class="toc-text">元素拼成字符串(.join)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%88%87%E7%89%87"><span class="toc-text">字符串切片</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%80%86%E5%BA%8F"><span class="toc-text">字符串逆序</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#max%E5%92%8Cmin%E5%87%BD%E6%95%B0"><span class="toc-text">max和min函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#for%E2%80%A6else%E2%80%A6"><span class="toc-text">for…else…</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9E%E4%BE%8B-%E5%90%8D%E7%89%87%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F"><span class="toc-text">实例-名片管理系统</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BC%95%E7%94%A8"><span class="toc-text">引用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F%E4%B8%8E%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F"><span class="toc-text">局部变量与全局变量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%9A%E5%80%BC%E5%8F%82%E6%95%B0"><span class="toc-text">多值参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%9C%E5%9B%BE"><span class="toc-text">作图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#np-linalg-norm-%E8%8C%83%E6%95%B0"><span class="toc-text">np.linalg.norm(范数)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%BB-mat%E6%96%87%E4%BB%B6"><span class="toc-text">读.mat文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#np-concatenate-%E7%9F%A9%E9%98%B5%E6%8B%BC%E6%8E%A5"><span class="toc-text">np.concatenate 矩阵拼接</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%BB-txt%E6%96%87%E4%BB%B6%E6%95%B0%E6%8D%AE"><span class="toc-text">读.txt文件数据</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6"><span class="toc-text">删除文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AD%89%E9%97%B4%E8%B7%9D%E9%87%87%E6%A0%B7-numpy-linspace"><span class="toc-text">等间距采样 numpy.linspace</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#len"><span class="toc-text">len</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#round"><span class="toc-text">round</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#int-x-%E5%92%8Cint-round-x"><span class="toc-text">int(x)和int(round(x))</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#np-ceil-%E5%92%8C-np-floor"><span class="toc-text">np.ceil 和 np.floor</span></a></li></ol></li></ol></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Python学习"><a href="#Python学习" class="headerlink" title="Python学习"></a>Python学习</h1><h4 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h4><pre><code>不可变数据（3 个）：Number（数字）、String（字符串）、Tuple（元组）；
+可变数据（3 个）：List（列表）、Dictionary（字典）、Set（集合）。 
+</code></pre>
+<h4 id="列表赋值"><a href="#列表赋值" class="headerlink" title="列表赋值"></a>列表赋值</h4><p>​        如果采用直接列表相等的赋值方式，则当原列表原始变化的时候，被赋值的变量的列表内容也会发生变化。</p>
+<pre><code>my_fruits=[&quot;apple&quot;,&quot;banana&quot;,&quot;juice&quot;]
+your_fruits=my_fruits
+print(your_fruits)
+my_fruits.append(&quot;mango&quot;)
+print(your_fruits)
+</code></pre>
+<p>​        输出结果为</p>
+<pre><code>[&quot;apple&quot;,&quot;banana&quot;,&quot;juice&quot;]
+[&quot;apple&quot;,&quot;banana&quot;,&quot;juice&quot;,&quot;mango&quot;]
+</code></pre>
+<p>​        比较另外一种赋值方式</p>
+<pre><code>my_fruits=[&quot;apple&quot;,&quot;banana&quot;,&quot;juice&quot;]
+we_fruits=my_fruits[:]
+my_fruits.append(&quot;mango&quot;)
+print(we_fruits)
+</code></pre>
+<p>​        输出结果为</p>
+<pre><code>[&quot;apple&quot;,&quot;banana&quot;,&quot;juice&quot;]
+</code></pre>
+<p>​        这种赋值方式相当于创建了一个列表，使得列表的元素和之前列表的元素相同，但并不等同于之前的列表，因此列表内容不会随着原列表内容发生变化而变化</p>
+<pre><code>data=[[1,2,3],[4,5,6],[7,8,9]]
+data[1],[2]=100 #给第二个第三列的数进行赋值
+print(data)
+</code></pre>
+<p>​        输出结果为</p>
+<pre><code>[[1,2,3],[4,5,100],[7,8,9]]
+</code></pre>
+<h4 id="元组和列表"><a href="#元组和列表" class="headerlink" title="元组和列表"></a>元组和列表</h4><p>​        表示方法：元组用（）表示，列表用[ ]表示</p>
+<p>​        含义区别：元组的元素<strong>不能</strong>修改，列表可以重新赋值</p>
+<p>​        <em>注意：元组中只包含一个元素时，需要在元素后面添加逗号</em>，如：</p>
+<pre><code>tup1 = (50,)
+</code></pre>
+<h4 id="循环嵌套"><a href="#循环嵌套" class="headerlink" title="循环嵌套"></a>循环嵌套</h4><p>​        输出2至100内的所有质数</p>
+<p>用for循环写：</p>
+<pre><code>i=2
+for num in range(2,101):
+    for i in range(2,num//2):
+        if not(num%i):
+        break
+    if i&gt;num/i:      #把2也能括进去
+        print(num,&quot;是质数&quot;)
+print(&quot;over&quot;)
+</code></pre>
+<p>并用一个列表输出</p>
+<pre><code>i=2
+n=[]
+j=0
+for num in range(2,101):
+    for i in range(2,num//2):
+        if not(num%i):
+            break
+    if i&gt;num/i:      
+            n.insert(j, num)
+        j+=1
+print(n)
+</code></pre>
+<p>用while循环写：</p>
+<pre><code>num=2
+while(num&lt;=100):
+    i=2
+    while(i&lt;=num/i):
+        if(not(num%i)):
+        break
+    i=i+1
+    if(i&gt;num/i):
+        print(num,&#39;是质数&#39;)
+    num=num+1
+print(&#39;over&#39;)
+</code></pre>
+<h4 id="深拷贝与浅拷贝"><a href="#深拷贝与浅拷贝" class="headerlink" title="深拷贝与浅拷贝"></a>深拷贝与浅拷贝</h4><p>浅拷贝：</p>
+<pre><code>a = &#123;1: [1,2,3]&#125;
+b = a.copy()   #a和b是同一片内存地址
+</code></pre>
+<p>深拷贝：</p>
+<pre><code>import copy
+
+c = copy.deepcopy(a)   #a和c是两片内存地址
+</code></pre>
+<h4 id="空间两点间欧氏距离计算"><a href="#空间两点间欧氏距离计算" class="headerlink" title="空间两点间欧氏距离计算"></a>空间两点间欧氏距离计算</h4><pre><code>left = [0.3960, -0.2886, 0.9663]
+obj = [0.4, 0.3, 0.96]
+left_end = numpy.asarray([left[0],left[1],left[2]])
+obj_end = numpy.asarray([obj[0],obj[1],obj[2]])
+left_obj = left_end - obj_end
+a = numpy.sqrt(numpy.inner(left_obj, left_obj))
+</code></pre>
+<h4 id="向txt文件中写入变量值"><a href="#向txt文件中写入变量值" class="headerlink" title="向txt文件中写入变量值"></a>向txt文件中写入变量值</h4><pre><code># r，只读模式【默认模式，文件必须存在，不存在则抛出异常】
+# w，只写模式【不可读；不存在则创建；存在则清空内容】
+# a， 只追加写模式【不可读；不存在则创建；存在则只追加内容】
+file_handle=open(&#39;c.txt&#39;,mode=&#39;a&#39;)      
+file_handle.write(str(fx_z))       #fx_z为变量名
+file_handle.write(&#39;\n&#39;)
+file_handle.close()
+</code></pre>
+<h4 id="从txt文件中读取数据"><a href="#从txt文件中读取数据" class="headerlink" title="从txt文件中读取数据"></a>从txt文件中读取数据</h4><pre><code>vec = np.genfromtxt(&#39;wiki.ch.text.vector&#39;, skip_header=1, delimiter=&#39; &#39;, dtype=None)
+# vec为变量名,类型为ndarray
+# &#39;wiki.ch.text.vector&#39; 为 路径 +文件名
+# skip_header=1 ,跳过第一行
+# delimiter=&#39; &#39;,分隔符
+# 因为txt中有str和float，所以要设置dtype=None，默认只会读float所以会报错
+</code></pre>
+<h4 id="python画图"><a href="#python画图" class="headerlink" title="python画图"></a>python画图</h4><pre><code>#   画三维图
+ import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+%matplotlib widget         # conda install -c conda-forge ipympl  安装三维图旋转插件
+ax = plt.axes(projection=&#39;3d&#39;)
+ax.plot3D(rDataj[0,:],rDataj[1,:],rDataj[2,:])
+
+#   画二维图
+import matplotlib.pyplot as plt
+%matplotlib widget
+plt.plot(rDataj[0,:])
+plt.plot(rDataj[1,:])
+plt.plot(rDataj[2,:])
+</code></pre>
+<h4 id="numpy模块常用的矩阵函数"><a href="#numpy模块常用的矩阵函数" class="headerlink" title="numpy模块常用的矩阵函数"></a>numpy模块常用的矩阵函数</h4><pre><code>import numpy as np
+
+np.array()    #创建 ndarray 数组[[ ]，[ ],、、、]
+np.zeros((3,2))   # 创建3×2的ndarray  np.zeros((3,))维度为1
+np.empty()          #与np.zeros()类似    
+np.dot( , )            #矩阵乘法
+np.linalg.det()   #方阵行列式
+np.linalg.inv()   #矩阵求逆
+np.sum()
+b=np.array([[ 0,  1,  2,  3,  4,  5],
+   [ 6,  7,  8,  9, 10, 11]])
+&gt;&gt;&gt; np.sum(b)    #默认对所有元素进行求和
+66
+&gt;&gt;&gt; np.sum(b,axis=0)        #在第一个轴展开方向上求和
+array([ 6,  8, 10, 12, 14, 16])
+&gt;&gt;&gt; np.sum(b,axis=1)
+array([15, 51])
+</code></pre>
+<h4 id="常用的矩阵维度变换函数"><a href="#常用的矩阵维度变换函数" class="headerlink" title="常用的矩阵维度变换函数"></a>常用的矩阵维度变换函数</h4><pre><code>.reshape()      #a.reshape(3,2)  将a变成3行2列
+a=np.array([[1,2,3],[3,2,1]])
+b=a.reshape(-1,1)    #变成列向量，访问b中元素，用b[i]，或者b[i,j]。b[i]表示输出b的第i行
+b=a.reshape(1,-1)    #变成行向量，访问b中元素，用b[i,j]
+
+a=np.array([[1,2,3],[3,2,1]])
+b=a.reshape(1,-1)     #b.shape = (1,6),[[1,2,3,3,2,1]],b[0]=[1 2 3 3 2 1]
+c=a.flatten()          #c.shape = (6,),[1,2,3,3,2,1],c[0]=1
+.flatten()      #变成一维
+.shape          #查看矩阵或者数组的维度
+
+a.shape[0]    #只返回矩阵的行数
+a.shape[1]    #只返回矩阵的列数
+</code></pre>
+<h4 id="字符串的拼接"><a href="#字符串的拼接" class="headerlink" title="字符串的拼接"></a>字符串的拼接</h4><pre><code>a=&quot;啦啦啦&quot;
+b=&quot;哦哦哦哦哦哦哦哦哦&quot;
+c=a+b
+print c     
+
+#啦啦啦哦哦哦哦哦哦哦哦哦
+</code></pre>
+<h4 id="格式化输出"><a href="#格式化输出" class="headerlink" title="格式化输出"></a>格式化输出</h4><pre><code>#  %s——字符串，%d——整数，%f——浮点数
+
+d=5.00
+e=2
+f=10.00
+print(&quot;苹果单价为%.2f元/斤，购买了%d斤，需要支付%.2f元&quot; % (d,e,f))     # %.2f保留两位小数的浮点数
+
+#(d,e,f)是一个元组
+tup=(d,e,f)
+print(&quot;苹果单价为%.2f元/斤，购买了%d斤，需要支付%.2f元&quot; % tup)
+输出结果一致
+</code></pre>
+<h4 id="elif"><a href="#elif" class="headerlink" title="elif"></a>elif</h4><pre><code>score=79
+if score&lt;60:
+    print(&quot;不及格&quot;)
+elif score&lt;70:
+    print(&quot;及格&quot;)
+elif score&lt;90:
+    print(&quot;良好&quot;)
+else:
+    print(&quot;优秀&quot;)
+
+# elif = else if
+</code></pre>
+<h4 id="末尾取消换行和追加换行"><a href="#末尾取消换行和追加换行" class="headerlink" title="末尾取消换行和追加换行"></a>末尾取消换行和追加换行</h4><pre><code>#此方法局限于python3
+for i in range (1,10):
+    for j in range(1,i+1):
+        print(&quot;%d * %d = %d  &quot; %(i,j,i*j) , end=&quot;&quot;)     # end=为跟在后面输出的，代替了默认的换行符
+    print(&quot;\n&quot;)         # 或print(&quot;&quot;),追加换行符
+
+#python2
+i=1
+while(i&lt;=5):
+    j=1
+    while(j&lt;=i):
+        print(&quot;*&quot;),      #在输出末尾追加“，”来取消换行
+        j=j+1
+    print(&quot;&quot;)
+    i=i+1
+</code></pre>
+<h4 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h4><p>每一个以.py结尾的Python源代码都是一个模块，用<em>import</em>导入,命名不能以数字开头<br>模块中定义的<strong>全局变量</strong>、<strong>函数</strong>都可以在外部直接使用</p>
+<h4 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h4><p>列表用[]定义,数据之间用“，”分隔，索引（下标）从0开始<br>列表中的数据类型可以不一致</p>
+<h5 id="列表的增、删、改、查、长度"><a href="#列表的增、删、改、查、长度" class="headerlink" title="列表的增、删、改、查、长度"></a>列表的增、删、改、查、长度</h5><pre><code>#查找
+name_list = [&quot;zhangsan&quot;,&quot;lisi&quot;,&quot;wangwu&quot;]
+print(name_list[0])
+print(name_list.index(&quot;wangwu&quot;))
+
+#修改
+name_list = [&quot;zhangsan&quot;,&quot;lisi&quot;,&quot;wangwu&quot;]
+name_list[1]=&quot;李四&quot;        #中文字符在python2中会出现乱码
+print(name_list)
+
+#添加
+name_list.append(&quot;zhaoliu&quot;)    #在末尾追加，且只能追加一个
+
+name_list = [1,2,3,4]
+name_list.insert(2,5)       #.insert(index,数据)
+print(name_list)         #[1,2,5,3,4]
+
+temp_list=[6,7,8,9]
+name_list.extend(temp_list)     #列表的拼接
+
+#删除
+name_list=[1,2,3,4,5,6]
+name_list.remove(4)     #[1,2,3,5,6] ,remove能删除指定元素（第一次出现）
+
+name_list.pop()    #[1,2,3,5] ,pop默认删除最后一个元素（最后进列表，最先被删除），.pop(index)能删除指定索引的元素
+
+name_list.clear()   #清空列表
+
+name_list = [&quot;zhangsan&quot;,&quot;lisi&quot;,&quot;wangwu&quot;]     
+del name_list[0]      #del关键字能删除列表元素
+print(name_list)     #[&#39;lisi&#39;,&#39;wangwu&#39;]
+a=10
+del a                #删除变量 
+print(a)          #报错
+
+#列表长度
+name_list = [&quot;zhangsan&quot;,&quot;lisi&quot;,&quot;wangwu&quot;]     
+print(name_list)
+a=len(name_list)
+print(a)                #3
+
+#元素出现次数
+b=name_list.count(&quot;zhangsan&quot;)
+print(b)    
+</code></pre>
+<h4 id="python中的引号"><a href="#python中的引号" class="headerlink" title="python中的引号"></a>python中的引号</h4><p>python中“ ”与‘ ’在表示字符串时是没有区别的<br>在输出时，输出内容有“ ”（双引号）则在单引号内使用双引号，即‘“要输出内容”’；<br>输出内容有‘ ’（单引号）则在双引号内使用单引号，即“‘要输出内容‘“；<br>补充：’’’ (三引号)用法：<br>1、用作多行注释；2、用作表示一个字符串<br>注：python中并没有提供专门的多行注释的符号，当一串字符被三引号引用时，但它不作为字符串被操作时，这个三引号内引用的内容就被视为注释。</p>
+<h4 id="函数与方法"><a href="#函数与方法" class="headerlink" title="函数与方法"></a>函数与方法</h4><p>函数名(参数)      #函数的调用，len(name_list)<br>对象.方法名(参数)     #方法的调用，b=name_list.count(“zhangsan”)</p>
+<h4 id="列表倒序排列"><a href="#列表倒序排列" class="headerlink" title="列表倒序排列"></a>列表倒序排列</h4><pre><code>aa=[2,5,1,8,3,7]
+first=0
+last=len(aa)-1
+while(first&lt;last):
+    bb=aa[first]
+    aa[first]=aa[last]
+    aa[last]=bb
+    first+=1
+    last-=1
+print(aa)
+
+#相当于aa.reverse()
+</code></pre>
+<h5 id="列表的升序和降序"><a href="#列表的升序和降序" class="headerlink" title="列表的升序和降序"></a>列表的升序和降序</h5><pre><code>aa=[2,5,1,8,3,7] 
+aa.sort()        #升序
+aa.sort(reverse=True)    #降序
+</code></pre>
+<h4 id="列表遍历"><a href="#列表遍历" class="headerlink" title="列表遍历"></a>列表遍历</h4><pre><code>name_list=[&quot;zhangsan&quot;,&quot;lisi&quot;,&quot;wangwu&quot;]
+for i in name_list:
+    print(i,end=&quot; &quot;)
+</code></pre>
+<h4 id="列表的"><a href="#列表的" class="headerlink" title="列表的+="></a>列表的+=</h4><pre><code>#列表的“+=”相当于.extend(),所以外部实参的值也会改变。而不是对应元素相加再赋值
+num_list1=[1,2,3]
+num_list2=[4,5,6]
+num_list1+=num_list2
+print(num_list1)
+</code></pre>
+<h4 id="元组与列表"><a href="#元组与列表" class="headerlink" title="元组与列表"></a>元组与列表</h4><p>元组的元素不能修改<br>元组用“()”定义<br>元组的使用场景<br>1、做函数的参数和返回值（可以存放多个类型不同的数据）<br>特别是要返回多个数据的值，常以元组的形式 return(变量1，变量2，变量3，…)</p>
+<pre><code>def pr1():
+    # print(&quot;num的值为%d,地址为%d&quot; % (num,id(num)))
+    heig=1.75
+    weig=120
+    return (heig,weig)
+    
+gl_h,gl_w=pr1()     #用多个变量去接受元组的元素，方便之后使用
+print(&quot;身高为：%.2f&quot;%gl_h)
+print(&quot;体重为：%.2f&quot;%gl_w)
+#身高为：1.75
+#体重为：120.00
+
+#用变量接收元组的元素
+a=6
+b=100
+b,a=(a,b)   #不使用第三个变量，交换两个变量的值
+print(a)
+print(b)
+</code></pre>
+<p>2、列表-&gt;元组，保护数据不被修改</p>
+<h5 id="相互转换"><a href="#相互转换" class="headerlink" title="相互转换"></a>相互转换</h5><p>list(元组)<br>tuple(列表)</p>
+<h4 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h4><p>用<strong>键值对</strong>（key-value）的形式保存无序的数据集合<br><strong>值</strong>可以是任何数据类型，但<strong>键</strong>只能是<em>字符串、数字和元组</em></p>
+<h4 id="字典的合并"><a href="#字典的合并" class="headerlink" title="字典的合并"></a>字典的合并</h4><pre><code>#update方法，如果key相同会覆盖原有的键值对
+oran_dic = &#123;&quot;name&quot;:&quot;orange&quot;&#125;
+temp_dic=&#123;&quot;weight&quot;:1.8&#125;
+oran_dic.update(temp_dic)
+print(oran_dic)
+</code></pre>
+<h4 id="字典的遍历"><a href="#字典的遍历" class="headerlink" title="字典的遍历"></a>字典的遍历</h4><pre><code>#for循环得到的是字典的key
+oran_dic = &#123;&quot;name&quot;:&quot;orange&quot;,&quot;weight&quot;:1.8&#125;
+for i in oran_dic:
+    print(&quot;%s-%s&quot;%(i,oran_dic[i]))
+#输出name-orange,weight-1.8
+</code></pre>
+<h4 id="字典做列表元素"><a href="#字典做列表元素" class="headerlink" title="字典做列表元素"></a>字典做列表元素</h4><pre><code>phon_lis = [
+    &#123;&quot;name&quot;:&quot;zhangsan&quot;,&quot;age&quot;:18,&quot;phone&quot;:&quot;12345&quot;&#125;,
+    &#123;&quot;name&quot;:&quot;lisi&quot;,&quot;age&quot;:16,&quot;phone&quot;:&quot;23456&quot;&#125;
+    ]
+print(phon_lis)
+
+for i in phon_lis:       #列表的循环遍历，i是列表中的每个元素（字典）
+    for j in i:          #字典的循环遍历，j是每个key
+        print(&quot;%s-%s&quot; % (j,i[j]), end=&quot; &quot;)
+    print(&quot;&quot;)
+
+#[&#123;&#39;name&#39;: &#39;zhangsan&#39;, &#39;age&#39;: 18, &#39;phone&#39;: &#39;12345&#39;&#125;, &#123;&#39;name&#39;: &#39;lisi&#39;, &#39;age&#39;: 16, &#39;phone&#39;: &#39;23456&#39;&#125;]
+name-zhangsan age-18 phone-12345 
+name-lisi age-16 phone-23456 
+</code></pre>
+<h4 id="字符串的分割-split"><a href="#字符串的分割-split" class="headerlink" title="字符串的分割(.split)"></a>字符串的分割(.split)</h4><pre><code>str = &quot;Line1-abcdef \nLine2-abc \nLine4-abcd&quot;
+str.split(&quot; &quot;,2)       #指定以“ ”作为分隔符，切分2次，分成3块
+#不指定分隔符，则默认为所有的空字符，包括空格、换行(\n)、制表符(\t)等
+#split方法返回数据类型为列表
+</code></pre>
+<h4 id="元素拼成字符串-join"><a href="#元素拼成字符串-join" class="headerlink" title="元素拼成字符串(.join)"></a>元素拼成字符串(.join)</h4><pre><code>tup=(&quot;1,2,3&quot;,&quot;zhangsan&quot;)
+str_2=&quot; &quot;.join(tup)      #元组元素的拼接，每个元素必须是字符串，指定以“ ”作为分隔符
+print(str_2)
+#1,2,3 zhangsan
+
+lis=[&quot;1,2,3&quot;,&quot;zhangsan&quot;]
+str_3=&quot;\t&quot;.join(lis)      #列表字符串元素的拼接
+print(str_3)
+#1,2,3   zhangsan
+
+dic=&#123;&quot;name&quot;:&quot;zhangsan&quot;,&quot;age&quot;:18&#125;
+str_4=&quot;\n&quot;.join(dic)       #字典key的拼接
+print(str_4)
+#name
+#age
+</code></pre>
+<h4 id="字符串切片"><a href="#字符串切片" class="headerlink" title="字符串切片"></a>字符串切片</h4><pre><code>#取出指定索引中间的字符串,结束索引对应的元素取不到
+#对于列表、元组（有序的对象）都可以用切片
+#如字符串”python&quot;，0p1y2t3h4o5n，p-6y-5t-4h-3o-2n-1
+#str[0:5:1],在索引0和5切割，步长为1，取出&quot;pytho&quot;
+
+str_5=&quot;元素拼成的字符串payatahaoan&quot;
+temp_str=str_5[8::2]     #结束索引不指定，能取到最后一个元素
+print(temp_str)
+#python
+</code></pre>
+<h4 id="字符串逆序"><a href="#字符串逆序" class="headerlink" title="字符串逆序"></a>字符串逆序</h4><pre><code>str_6=&quot;python&quot;
+print(str_6[::-1])  
+#等价于str_6[-1::-1]
+</code></pre>
+<h4 id="max和min函数"><a href="#max和min函数" class="headerlink" title="max和min函数"></a>max和min函数</h4><pre><code>#对于列表、元组、字典（key）、字符串都适用
+list_b=[&quot;0&quot;,&quot;Ab&quot;,&quot;cccc&quot;]
+print(max(list_b))
+#cccc
+#字符比较大小遵循&quot;0&quot;&lt;&quot;A&quot;&lt;&quot;a&quot;(ASCII码顺序)
+</code></pre>
+<h4 id="for…else…"><a href="#for…else…" class="headerlink" title="for…else…"></a>for…else…</h4><pre><code>list_c=&quot;abcdefghi&quot;
+find_str=&quot;e&quot;
+for i in range(len(list_c)):      #用i做索引变量，便于输出
+    if(list_c[i]==find_str):
+        print(i)
+        break
+else:                            #整个循环完全走完，没有中途退出，会执行else语句
+    print(&quot;列表中没有字母%s&quot;% find_str)  
+
+
+name_list=[
+&#123;&quot;name&quot;:&quot;zhangsan&quot;,&quot;age&quot;:&quot;18&quot;,&quot;phone&quot;:&quot;123456&quot;&#125;,
+&#123;&quot;name&quot;:&quot;lisi&quot;,&quot;age&quot;:&quot;17&quot;,&quot;phone&quot;:&quot;234567&quot;&#125;,
+&#123;&quot;name&quot;:&quot;wangwu&quot;,&quot;age&quot;:&quot;19&quot;,&quot;phone&quot;:&quot;345678&quot;&#125;,
+&#123;&quot;name&quot;:&quot;zhaoliu&quot;,&quot;age&quot;:&quot;16&quot;,&quot;phone&quot;:&quot;456789&quot;&#125;
+]
+#遍历整个列表
+for i in name_list:
+    if(i[&quot;name&quot;]==&quot;wangwu&quot;):
+        #遍历整个字典
+        for j in i:
+            print(&quot;%s-%s&quot;% (j,i[j]),end=&quot; &quot;)   #格式化输出字典 
+        print(&quot;&quot;)
+        break
+else:
+    print(&quot;查无此人！&quot;)
+</code></pre>
+<h4 id="实例-名片管理系统"><a href="#实例-名片管理系统" class="headerlink" title="实例-名片管理系统"></a>实例-名片管理系统</h4><pre><code>#! /home/xx/anaconda3/bin/python
+def new_name(name_list):
+    &quot;&quot;&quot;添加联系人&quot;&quot;&quot;
+    n=input(&quot;请输入添加的联系人姓名：&quot;)
+    a=input(&quot;请输入添加的联系人年龄：&quot;)
+    p=input(&quot;请输入添加的联系人电话：&quot;)
+
+    temp_tup=&#123;&quot;name&quot;:n,&quot;age&quot;:a,&quot;phone&quot;:p&#125;
+    name_list.append(temp_tup)
+    return name_list
+
+def show_name(name_list):
+    &quot;&quot;&quot;显示全部联系人&quot;&quot;&quot;
+    for i in name_list:
+        for j in i:
+            print(&quot;%s-%s&quot; % (j,i[j]),end=&quot; &quot;)
+        print(&quot;&quot;)
+
+def find_name(name_list):
+    &quot;&quot;&quot;查找、修改、删除联系人&quot;&quot;&quot;
+    n=input(&quot;请输入需要查找的联系人：\n&quot;)
+    for i in name_list:
+        if(i[&quot;name&quot;]==n):
+            for j in i:
+                print(&quot;%s-%s&quot; % (j,i[j]),end=&quot; &quot;)
+            print(&quot;&quot;)
+
+            while(1):
+                aa=input(&quot;需要修改请输入1，需要删除请输入2，退出查询请输入3\n&quot;)
+                if(aa==&quot;1&quot;):
+                    n_1=input(&quot;请输入姓名：&quot;)
+                    a_1=input(&quot;请输入年龄：&quot;)
+                    p_1=input(&quot;请输入电话：&quot;)
+                    i[&quot;name&quot;]=n_1
+                    i[&quot;age&quot;]=a_1
+                    i[&quot;phone&quot;]=p_1
+                    return name_list
+                elif(aa==&quot;3&quot;):
+                    return name_list
+                elif(aa==&quot;2&quot;):
+                    name_list.remove(i)
+                    return name_list
+                else:
+                    print(&quot;输入有误，请重新输入&quot;)
+    else:
+        print(&quot;查无此人&quot;)
+        return name_list
+
+
+print(&quot;*************&quot;)
+print(&quot;欢迎使用名片管理系统&quot;)
+
+print(&quot;1、新建名片&quot;)
+print(&quot;2、显示全部&quot;)
+print(&quot;3、查询名片&quot;)
+print(&quot;0、退出系统&quot;)
+
+print(&quot;************&quot;)
+
+name_list=[
+    &#123;&quot;name&quot;:&quot;张三&quot;,&quot;age&quot;:18,&quot;phone&quot;:&quot;123456&quot;&#125;,
+    &#123;&quot;name&quot;:&quot;李四&quot;,&quot;age&quot;:19,&quot;phone&quot;:&quot;234567&quot;&#125;,
+    &#123;&quot;name&quot;:&quot;王五&quot;,&quot;age&quot;:20,&quot;phone&quot;:&quot;345678&quot;&#125;
+]
+while(1):
+    a=input(&quot;请输入操作对应编号\n&quot;)
+    if(a==&quot;1&quot;):
+        name_list=new_name(name_list)
+    elif(a==&quot;0&quot;):
+        print(&quot;使用完毕&quot;)
+        break
+    elif(a==&quot;2&quot;):
+        show_name(name_list)
+    elif(a==&quot;3&quot;):
+        name_list=find_name(name_list)
+</code></pre>
+<h4 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h4><pre><code>a=1
+</code></pre>
+<p>变量a存储的是数据1的地址（引用）</p>
+<p>先看=右侧，开辟一块内存地址，其中存放数据1，让变量a指向这块内存地址</p>
+<p>函数中的参数传递，实参-&gt;形参（或返回值的传递），传递的不是数据本身，而是引用，即传递的是数据的内存地址</p>
+<p>当调用函数时，数据从实参-&gt;形参，相当于这两个变量都是指向这个数据的引用<br>在函数内部的<strong>赋值操作</strong>不会影响实参的大小<br>但是如果参数是<strong>可变数据类型</strong>，在函数内部用<strong>方法</strong>修改了数据，会影响外部的数据</p>
+<h4 id="局部变量与全局变量"><a href="#局部变量与全局变量" class="headerlink" title="局部变量与全局变量"></a>局部变量与全局变量</h4><p>局部变量的生命周期：<br>局部变量在<strong>函数执行</strong>时才会被创建<br>函数执行结束后局部变量被系统回收<br>局部变量在生命周期內,可以用来存储函数内部临时使用到的数据</p>
+<p>全局变量（不在某个函数内部定义的变量）均为全局变量<br>全局变量的值在函数内部不能直接修改<br>修改需要使用<strong>global</strong>关键字<br>全局变量命名：建议以**g_<strong>（或</strong>gl_**）开头</p>
+<pre><code>def pr1():
+    global g_num    #指明是全局变量num
+    g_num=10        #修改全局变量的值
+    print(&quot;g_num的值为%d,地址为%d&quot; % (g_num,id(g_num)))    #id()函数:返回数据（或变量所存数据）的地址
+
+def pr2():
+    print(&quot;g_num的值为%d,地址为%d&quot; % (g_num,id(g_num)))
+
+def pr3():
+    print(&quot;g_num的值为%d,地址为%d&quot; % (g_num,id(g_num))
+
+g_num =100
+pr1()
+pr2()
+pr3()
+#g_num的值为10,地址为94013836051488
+#g_num的值为10,地址为94013836051488
+#g_num的值为10,地址为94013836051488
+</code></pre>
+<h4 id="多值参数"><a href="#多值参数" class="headerlink" title="多值参数"></a>多值参数</h4><pre><code>#元组作为参数(常规)
+def sum_numbers(n_tup):
+    num_sum=0
+    for i in n_tup:
+        num_sum+=i
+    return num_sum
+
+gl_sum=sum_numbers((1,2,3,4,5))    #不方便阅读
+print(gl_sum) 
+
+#元组作为参数(多值参数)
+def sum_numbers(*n_tup):
+    num_sum=0
+    for i in n_tup:    #n_tup当成正常元组使用即可
+        num_sum+=i
+    return num_sum
+
+gl_sum=sum_numbers(1,2,3,4,5)
+print(gl_sum)
+</code></pre>
+<h4 id="作图"><a href="#作图" class="headerlink" title="作图"></a>作图</h4><pre><code>import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D   #引入画图工具包
+from matplotlib.font_manager import FontProperties  #设置字体
+
+#导入所需要的字体，如宋体
+songti = FontProperties(fname=r&quot;/home/xx/fonts/simsun.ttf&quot;, size=10)  
+plt.rcParams[&quot;font.family&quot;] = &quot;Times New Roman&quot;     #未指定，默认是Times New Roman
+plt.rcParams[&quot;font.size&quot;] = &quot;10&quot;
+plt.rcParams[&quot;text.usetex&quot;] = False
+plt.rcParams[&#39;axes.unicode_minus&#39;] =False
+#设置图幅的长和宽，这里是论文单栏双图
+fig_width = 190/25.4  # mm to inch
+fig, ax = plt.subplots(ncols=2, figsize=(fig_width, fig_width/2 *4/5))
+
+#具体的画图代码
+t = np.linspace(0,10,100)   #t.shape = (100,)
+a=np.sin(t)
+b=np.cos(t)
+# ax[0].axis(&#39;equal&#39;);ax[1].axis(&#39;equal&#39;)    #横纵坐标尺度一致
+ax[0].plot(t,a,color=&#39;r&#39;,linewidth=2,label =u&#39;正弦曲线&#39;)   #打上标签，方便写图例
+ax[0].plot(t,b,color=&#39;b&#39;,linewidth=2,label =u&#39;余弦曲线&#39;) 
+ax[0].set_xlim([min(t),max(t)])
+ax[0].set_ylim([min(a)-0.1,max(a)+0.5])
+legend_pos=(1.01,1.02)
+ax[0].legend(loc=&#39;upper right&#39;, bbox_to_anchor=legend_pos,ncol=2,handlelength=1,prop=songti)
+ax[0].set_xlabel(&#39;t [s]&#39;)
+ax[0].set_ylabel(u&#39;坐标值 [m]&#39;,FontProperties=songti)
+
+
+paper_path = &#39;figures&#39;
+fig.savefig(paper_path+&#39;xxxxxxxx.pdf&#39;,format=&#39;pdf&#39;,bbox_inches=&#39;tight&#39;,  pad_inches=0.0)
+</code></pre>
+<h4 id="np-linalg-norm-范数"><a href="#np-linalg-norm-范数" class="headerlink" title="np.linalg.norm(范数)"></a>np.linalg.norm(范数)</h4><p>参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/hqh131360239/article/details/79061535">np.linalg.norm(求范数)</a><br><img src="https://gitee.com/dmzecho/dmzecho.gitee.io/raw/master/%E8%8C%83%E6%95%B0.png" alt="范数" title="范数"></p>
+<pre><code>#常常被用来度量某个向量空间（或矩阵）中的每个向量的长度或大小
+#np.linalg.norm()，默认是二范数，即元素的平方和开根号
+import numpy as np
+x = np.array([
+    [0, 3, 4],
+    [1, 2, 3],
+    [4, 5, 6]])
+#默认参数ord=None，axis=None，keepdims=False
+print &quot;默认参数(矩阵整体元素平方和开根号，不保留矩阵二维特性)：&quot;,np.linalg.norm(x)
+print &quot;矩阵整体元素平方和开根号，保留矩阵二维特性：&quot;,np.linalg.norm(x,keepdims=True)
+a = np.linalg.norm(x,keepdims=True)
+print(a.shape)
+print &quot;矩阵每个行向量求向量的2范数：&quot;,np.linalg.norm(x,axis=1,keepdims=True)
+print &quot;矩阵每个列向量求向量的2范数：&quot;,np.linalg.norm(x,axis=0,keepdims=True)
+
+print &quot;矩阵1范数：&quot;,np.linalg.norm(x,ord=1,keepdims=True)
+print &quot;矩阵2范数：&quot;,np.linalg.norm(x,ord=2,keepdims=True)
+print &quot;矩阵∞范数：&quot;,np.linalg.norm(x,ord=np.inf,keepdims=True)
+
+print &quot;矩阵每个行向量求向量的1范数：&quot;,np.linalg.norm(x,ord=1,axis=1,keepdims=True)
+</code></pre>
+<p>输出内容：</p>
+<pre><code>默认参数(矩阵整体元素平方和开根号，不保留矩阵二维特性)： 10.770329614269007
+矩阵整体元素平方和开根号，保留矩阵二维特性： [[10.77032961]]
+(1, 1)
+矩阵每个行向量求向量的2范数： [[5.        ]
+[3.74165739]
+[8.77496439]]
+矩阵每个列向量求向量的2范数： [[4.12310563 6.164414   7.81024968]]
+矩阵1范数： [[13.]]
+矩阵2范数： [[10.56733812]]
+矩阵∞范数： [[15.]]
+矩阵每个行向量求向量的1范数： [[ 7.]
+[ 6.]
+[15.]]
+</code></pre>
+<h4 id="读-mat文件"><a href="#读-mat文件" class="headerlink" title="读.mat文件"></a>读.mat文件</h4><pre><code>import scipy.io as scio
+dataFile = &#39;/home/xx/project/ur5e_basic/src/franka_basic/DS-master/bottle.mat&#39;
+data = scio.loadmat(dataFile)
+print type(data)     #类型为字典
+vicon_bottle = np.zeros((483,7))
+for i in range(483):
+    vicon_bottle[i,:] = data[&#39;a&#39;][i,:]     #key为a
+</code></pre>
+<h4 id="np-concatenate-矩阵拼接"><a href="#np-concatenate-矩阵拼接" class="headerlink" title="np.concatenate 矩阵拼接"></a>np.concatenate 矩阵拼接</h4><pre><code>x = np.ones((100,1))
+y = np.zeros((100,1))
+# 若 x[100,1],y[100,1]
+xy = np.concatenate([x,y],axis = 0)
+# 按行拼接 ，xy[200,1]
+xy1 = np.concatenate([x,y],axis = 1)
+# 按列拼接 ，xy[100,2]
+</code></pre>
+<h4 id="读-txt文件数据"><a href="#读-txt文件数据" class="headerlink" title="读.txt文件数据"></a>读.txt文件数据</h4><p>pos_n = np.genfromtxt(‘data_path’, delimiter=’ ‘,dtype=None)</p>
+<h4 id="删除文件"><a href="#删除文件" class="headerlink" title="删除文件"></a>删除文件</h4><pre><code>import os
+os.remove(&#39;data_path&#39;)   #data_path为文件路径
+# os.rmdir(&#39;path&#39;)       #path为文件夹路径,空文件夹才能被删除
+# os.unlink(&#39;data_path&#39;)  # unlink的功能和remove一样是删除一个文件，但是删除一个正在使用的文件会报错
+</code></pre>
+<h4 id="等间距采样-numpy-linspace"><a href="#等间距采样-numpy-linspace" class="headerlink" title="等间距采样 numpy.linspace"></a>等间距采样 numpy.linspace</h4><pre><code>#np.linspace()
+
+import numpy as np
+a = np.linspace(start, end ,num=100, endpoint =True)
+</code></pre>
+<h4 id="len"><a href="#len" class="headerlink" title="len"></a>len</h4><pre><code>len + 列表          #即返回列表长度
+len + Numpy数组     #返回数组的行数
+</code></pre>
+<h4 id="round"><a href="#round" class="headerlink" title="round"></a>round</h4><pre><code>round ( x [, n]  )     #返回浮点数x的四舍五入值，n为小数的位数
+round(80.23456, 2)     #返回结果为 80.23
+round(100.000056, 3)   #返回结果为 100.0，真实结果为100.000
+round(100.000056, 4)   #返回结果为 100.0001
+# 省略掉n的值，表示四舍五入取整数，但是小数点后会有一位0，故常常用 int(round(x)) 四舍五入取整数
+</code></pre>
+<h4 id="int-x-和int-round-x"><a href="#int-x-和int-round-x" class="headerlink" title="int(x)和int(round(x))"></a>int(x)和int(round(x))</h4><pre><code>int(x)          #直接舍掉小数，不四舍五入
+int(round(x))   #四舍五入取整数
+</code></pre>
+<h4 id="np-ceil-和-np-floor"><a href="#np-ceil-和-np-floor" class="headerlink" title="np.ceil 和 np.floor"></a>np.ceil 和 np.floor</h4><pre><code>np.ceil(a) ,np.floor(a) : 计算各元素的ceiling值和floor值（ceiling向上取整，floor向下取整）
+
+a=np.array([1.5,1.2,-1.4,-3.-2.1,1.9,2.9])
+b=np.ceil(a)
+# array([ 2.,  2., -1., -5.,  2.,  3.])
+c=np.floor(a)
+# array([ 1.,  1., -2., -6.,  1.,  2.])
+</code></pre>
+
+      
+       
+    </div>
+</article>
+
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span></p>
+    
+    <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="DmzEcho">DmzEcho</a></p>
+    <p><span class="copy-title">发布时间:</span>2021-11-29, 12:20:49</p>
+    <p><span class="copy-title">最后更新:</span>2021-11-29, 11:46:31</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2021/11/29/Python%E5%AD%A6%E4%B9%A0/" title="">http://example.com/2021/11/29/Python%E5%AD%A6%E4%B9%A0/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">©2017 DmzEcho</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full"><span class="min "></span></button>
+<button class="post-toc-menu"><span class="post-toc-menu-icons"></span></button>
+<div class="post-toc"><span class="post-toc-title">目录</span>
+    <div class="post-toc-content">
+
+    </div>
+</div>
+<a class="" id="rocket" href="javascript:void(0)"></a>
+    </div>
+</div>
+<div class="acParent"></div>
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.0.1" ></script>
+
+<script src="/js/script.js?v=1.0.1" ></script>
+<script>
+    var img_resize = 'default';
+    /*作者、标签的自动补全*/
+    $(function () {
+        $('.search').AutoComplete({
+            'data': ['#math',],
+            'itemHeight': 20,
+            'width': 418
+        }).AutoComplete('show');
+    })
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $(".post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+        $('pre code').each(function(){
+            var lines = $(this).text().split('\n').length - 1, widther='';
+            if (lines>99) {
+                widther = 'widther'
+            }
+            var $numbering = $('<ul/>').addClass('pre-numbering ' + widther).attr("unselectable","on");
+            $(this).addClass('has-numbering ' + widther)
+                    .parent()
+                    .append($numbering);
+            for(var i=1;i<=lines;i++){
+                $numbering.append($('<li/>').text(i));
+            }
+        });
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<style>
+    pre{
+        position: relative;
+        margin-bottom: 24px;
+        border-radius: 10px;
+        border: 1px solid #e2dede;
+        background: #FFF;
+        overflow: hidden;
+    }
+    code.has-numbering{
+        margin-left: 30px;
+    }
+    code.has-numbering.widther{
+        margin-left: 35px;
+    }
+    .pre-numbering{
+        margin: 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        padding: 0.5em 3px 0.7em 5px;
+        border-right: 1px solid #C3CCD0;
+        text-align: right;
+        color: #AAA;
+        background-color: #fafafa;
+    }
+    .pre-numbering.widther {
+        width: 35px;
+    }
+</style>
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+        .nav .hide-list.fullscreen {
+            left: 492px
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+    .post .pjax article .article-entry>ol, .post .pjax article .article-entry>ul, .post .pjax article>ol, .post .pjax article>ul{
+        border: #e2dede solid 1px;
+        border-radius: 10px;
+        padding: 10px 32px 10px 56px;
+    }
+    .post .pjax article .article-entry li>ol, .post .pjax article .article-entry li>ul,.post .pjax article li>ol, .post .pjax article li>ul{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .post .pjax article .article-entry>ol>li, .post .pjax article .article-entry>ul>li,.post .pjax article>ol>li, .post .pjax article>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    .post .pjax article .article-entry li>ol>li, .post .pjax article .article-entry li>ul>li,.post .pjax article li>ol>li, .post .pjax article li>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        background: url("https://i.loli.net/2019/07/22/5d3521411f3f169375.png");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>

@@ -6,17 +6,17 @@
   <meta name="keywords" content="">
   <meta name="description" content="PID简单总结 | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="PID小结原理推导参考PID基本原理及实现 重点关注离散后的表达式：即：由公式可知 Ki &#x3D; Kp&#x2F;Ti    Kd &#x3D; Kp*TD 各参数含义及整定PID的优势是其泛用性，确定模型的情况下实现较为容易，也能满足自动控制系统的基本要求。并且它不关心输入量和输出量具体的物理含义和物理表达式，有着一套固定的调节程式，对新手也较为友好。 比例项：比例就是用来对系统的偏差进行反应，所以只要存在偏差，比例就">
+<meta name="description" content="PID小结原理推导参考PID基本原理及实现 重点关注离散后的表达式：即：由公式可知 Ki &#x3D; Kp&#x2F;Ti，Kd &#x3D; Kp*TD 各参数含义及整定PID的优势是其泛用性，确定模型的情况下实现较为容易，也能满足自动控制系统的基本要求。并且它不关心输入量和输出量具体的物理含义和物理表达式，有着一套固定的调节程式，对新手也较为友好。 比例项：比例就是用来对系统的偏差进行反应，所以只要存在偏差，比例就会起作">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PID简单总结">
 <meta property="og:url" content="http://example.com/2021/12/06/PID%E7%AE%80%E5%8D%95%E6%80%BB%E7%BB%93/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="PID小结原理推导参考PID基本原理及实现 重点关注离散后的表达式：即：由公式可知 Ki &#x3D; Kp&#x2F;Ti    Kd &#x3D; Kp*TD 各参数含义及整定PID的优势是其泛用性，确定模型的情况下实现较为容易，也能满足自动控制系统的基本要求。并且它不关心输入量和输出量具体的物理含义和物理表达式，有着一套固定的调节程式，对新手也较为友好。 比例项：比例就是用来对系统的偏差进行反应，所以只要存在偏差，比例就">
+<meta property="og:description" content="PID小结原理推导参考PID基本原理及实现 重点关注离散后的表达式：即：由公式可知 Ki &#x3D; Kp&#x2F;Ti，Kd &#x3D; Kp*TD 各参数含义及整定PID的优势是其泛用性，确定模型的情况下实现较为容易，也能满足自动控制系统的基本要求。并且它不关心输入量和输出量具体的物理含义和物理表达式，有着一套固定的调节程式，对新手也较为友好。 比例项：比例就是用来对系统的偏差进行反应，所以只要存在偏差，比例就会起作">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://gitee.com/dmzecho/dmzecho.gitee.io/raw/master/%E7%A6%BB%E6%95%A3PID_1.jpg">
 <meta property="og:image" content="https://gitee.com/dmzecho/dmzecho.gitee.io/raw/master/%E7%A6%BB%E6%95%A3PID_2.jpg">
 <meta property="article:published_time" content="2021-12-06T04:13:49.000Z">
-<meta property="article:modified_time" content="2021-12-06T04:58:46.168Z">
+<meta property="article:modified_time" content="2021-12-06T05:01:27.902Z">
 <meta property="article:author" content="DmzEcho">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://gitee.com/dmzecho/dmzecho.gitee.io/raw/master/%E7%A6%BB%E6%95%A3PID_1.jpg">
@@ -346,7 +346,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2021-12-06 12:58:46'>2021-12-06 12:13</time>
+        创建时间:<time class="date" title='更新时间: 2021-12-06 13:01:27'>2021-12-06 12:13</time>
         
     </div>
     <div class="article-meta">
@@ -385,15 +385,12 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="PID小结"><a href="#PID小结" class="headerlink" title="PID小结"></a>PID小结</h2><h3 id="原理推导"><a href="#原理推导" class="headerlink" title="原理推导"></a>原理推导</h3><p>参考<a target="_blank" rel="noopener" href="https://www.cnblogs.com/foxclever/p/8902029.html">PID基本原理及实现</a></p>
-<p>重点关注离散后的表达式：<br><img src="https://gitee.com/dmzecho/dmzecho.gitee.io/raw/master/%E7%A6%BB%E6%95%A3PID_1.jpg" alt="PID离散化"><br>即：<br><img src="https://gitee.com/dmzecho/dmzecho.gitee.io/raw/master/%E7%A6%BB%E6%95%A3PID_2.jpg" alt="PID离散化"><br>由公式可知 Ki = Kp/Ti    Kd = Kp*TD</p>
+<p>重点关注离散后的表达式：<br><img src="https://gitee.com/dmzecho/dmzecho.gitee.io/raw/master/%E7%A6%BB%E6%95%A3PID_1.jpg" alt="PID离散化"><br>即：<br><img src="https://gitee.com/dmzecho/dmzecho.gitee.io/raw/master/%E7%A6%BB%E6%95%A3PID_2.jpg" alt="PID离散化"><br>由公式可知 Ki = Kp/Ti，Kd = Kp*TD</p>
 <h3 id="各参数含义及整定"><a href="#各参数含义及整定" class="headerlink" title="各参数含义及整定"></a>各参数含义及整定</h3><p>PID的优势是其泛用性，确定模型的情况下实现较为容易，也能满足自动控制系统的基本要求。并且它不关心输入量和输出量具体的物理含义和物理表达式，有着一套固定的调节程式，对新手也较为友好。</p>
 <p>比例项：比例就是用来对系统的偏差进行反应，所以只要存在偏差，比例就会起作用。<br>积分项：积分主要是用来消除静差，所谓静差就是指系统稳定后输入输出之间依然存在的差值，积分就是通过偏差的累计来抵消系统的静差。<br>微分项：微分则是对偏差的变化趋势做出反应，根据偏差的变化趋势实现超前调节，提高反应速度。</p>
 <p>参数整定顺序：<br>参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/zhengyanan815/article/details/72918636">PID参数整定过程</a></p>
 <p><strong>简单总结为：</strong></p>
-<p>a.确定比例增益P<br>　　确定比例增益P时，首先去掉PID的积分项和微分项，一般是令Ti=0、Td=0，使PID为纯比例调节。输入设定为系统允许的最大值的60%-70%，由0逐渐加大比例增益P，直至系统出现振荡；再反过来，从此时的比例增益P逐渐减小，直至系统振荡消失，记录此时的比例增益P，设定PID的比例增益P为当前值的60%-70%。比例增益P调试完成。</p>
-<p>b.确定积分时间常数Ti<br>　　比例增益P确定后，设定一个较大的积分时间常数Ti的初值，然后逐渐减小Ti，直至系统出现振荡，之后再反过来，逐渐加大Ti，直至系统振荡消失。记录此时的Ti，设定PID的积分时间常数Ti为当前值的150%~180%。积分时间常数Ti调试完成。</p>
-<p>c.确定微分时间常数Td<br>　　积分时间常数Td一般不用设定，为0即可。若要设定，与确定 P和Ti的方法相同，取不振荡时的30%。 </p>
-<p>d.系统空载、带载联调，再对PID参数进行微调，直至满足要求。</p>
+<p><em>a.确定比例增益P</em><br>　　确定比例增益P时，首先去掉PID的积分项和微分项，一般是令Ti=0、Td=0，使PID为纯比例调节。输入设定为系统允许的最大值的60%-70%，由0逐渐加大比例增益P，直至系统出现振荡；再反过来，从此时的比例增益P逐渐减小，直至系统振荡消失，记录此时的比例增益P，设定PID的比例增益P为当前值的60%-70%。比例增益P调试完成。<br><em>b.确定积分时间常数Ti</em><br>　　比例增益P确定后，设定一个较大的积分时间常数Ti的初值，然后逐渐减小Ti，直至系统出现振荡，之后再反过来，逐渐加大Ti，直至系统振荡消失。记录此时的Ti，设定PID的积分时间常数Ti为当前值的150%~180%。积分时间常数Ti调试完成。<br><em>c.确定微分时间常数Td</em><br>　　积分时间常数Td一般不用设定，为0即可。若要设定，与确定 P和Ti的方法相同，取不振荡时的30%。<br><em>d.系统空载、带载联调再对PID参数进行微调，直至满足要求。</em></p>
 <h4 id="经典的末端单方向恒力跟踪"><a href="#经典的末端单方向恒力跟踪" class="headerlink" title="经典的末端单方向恒力跟踪"></a>经典的末端单方向恒力跟踪</h4><p><strong>参数初始化</strong></p>
 <pre><code>def PID_param_init():
     global _err_p,_err_i,_err_d,_err_dp,_delta_f2x
@@ -460,7 +457,7 @@
     
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="DmzEcho">DmzEcho</a></p>
     <p><span class="copy-title">发布时间:</span>2021-12-06, 12:13:49</p>
-    <p><span class="copy-title">最后更新:</span>2021-12-06, 12:58:46</p>
+    <p><span class="copy-title">最后更新:</span>2021-12-06, 13:01:27</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/2021/12/06/PID%E7%AE%80%E5%8D%95%E6%80%BB%E7%BB%93/" title="PID简单总结">http://example.com/2021/12/06/PID%E7%AE%80%E5%8D%95%E6%80%BB%E7%BB%93/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。

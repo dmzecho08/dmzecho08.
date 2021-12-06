@@ -6,20 +6,20 @@
   <meta name="keywords" content=" ros ">
   <meta name="description" content="Ros学习 | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="Markdown语法摘自https:&#x2F;&#x2F;www.jianshu.com&#x2F;p&#x2F;191d1e21f7ed&#x2F; 标题在想要设置为标题的文字前面加#来表示一个#是一级标题，二个#是二级标题，以此类推 注：标准语法一般在#后跟个空格再写文字 字体加粗要加粗的文字左右分别用两个*号包起来 斜体要倾斜的文字左右分别用一个*号包起来 倾斜加粗要倾斜和加粗的文字左右分别用三个*号包起来 分割线三个或者三个以上的 -">
+<meta name="description" content="PID小结原理推导参考PID基本原理及实现 重点关注离散后的表达式：即：由公式可知 Ki &#x3D; Kp&#x2F;Ti    Kd &#x3D; Kp*TD 各参数含义及整定PID的优势是其泛用性，确定模型的情况下实现较为容易，也能满足自动控制系统的基本要求。并且它不关心输入量和输出量具体的物理含义和物理表达式，有着一套固定的调节程式，对新手也较为友好。 比例项：比例就是用来对系统的偏差进行反应，所以只要存在偏差，比例就">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Markdown语法基础">
-<meta property="og:url" content="http://example.com/2021/11/29/Markdown%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/index.html">
+<meta property="og:title" content="PID简单总结">
+<meta property="og:url" content="http://example.com/2021/12/06/PID%E7%AE%80%E5%8D%95%E6%80%BB%E7%BB%93/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Markdown语法摘自https:&#x2F;&#x2F;www.jianshu.com&#x2F;p&#x2F;191d1e21f7ed&#x2F; 标题在想要设置为标题的文字前面加#来表示一个#是一级标题，二个#是二级标题，以此类推 注：标准语法一般在#后跟个空格再写文字 字体加粗要加粗的文字左右分别用两个*号包起来 斜体要倾斜的文字左右分别用一个*号包起来 倾斜加粗要倾斜和加粗的文字左右分别用三个*号包起来 分割线三个或者三个以上的 -">
+<meta property="og:description" content="PID小结原理推导参考PID基本原理及实现 重点关注离散后的表达式：即：由公式可知 Ki &#x3D; Kp&#x2F;Ti    Kd &#x3D; Kp*TD 各参数含义及整定PID的优势是其泛用性，确定模型的情况下实现较为容易，也能满足自动控制系统的基本要求。并且它不关心输入量和输出量具体的物理含义和物理表达式，有着一套固定的调节程式，对新手也较为友好。 比例项：比例就是用来对系统的偏差进行反应，所以只要存在偏差，比例就">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://gitee.com/dmzecho/dmzecho.gitee.io/raw/master/Chongqing.jpg">
-<meta property="article:published_time" content="2021-11-29T13:54:56.000Z">
-<meta property="article:modified_time" content="2021-12-01T03:21:40.706Z">
+<meta property="og:image" content="https://gitee.com/dmzecho/dmzecho.gitee.io/raw/master/%E7%A6%BB%E6%95%A3PID_1.jpg">
+<meta property="og:image" content="https://gitee.com/dmzecho/dmzecho.gitee.io/raw/master/%E7%A6%BB%E6%95%A3PID_2.jpg">
+<meta property="article:published_time" content="2021-12-06T04:13:49.000Z">
+<meta property="article:modified_time" content="2021-12-06T04:54:43.721Z">
 <meta property="article:author" content="DmzEcho">
-<meta property="article:tag" content="markdown">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://gitee.com/dmzecho/dmzecho.gitee.io/raw/master/Chongqing.jpg">
+<meta name="twitter:image" content="https://gitee.com/dmzecho/dmzecho.gitee.io/raw/master/%E7%A6%BB%E6%95%A3PID_1.jpg">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -82,7 +82,7 @@
 
 
 <ul>
-    <li><div class="all active">全部文章<small>(18)</small></div></li>
+    <li><div class="all active">全部文章<small>(19)</small></div></li>
     
 </ul>
 <div class="left-bottom">
@@ -94,7 +94,7 @@
     </div>
     <div><a class="about  site_url"  href="/about">关于</a></div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="18">
+<input type="hidden" id="yelog_site_posts_number" value="19">
 
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -312,6 +312,14 @@
            data-author="" >
             <span class="post-title" title="hexo配置问题">hexo配置问题</span>
             <span class="post-date" title="2021-11-29 12:54:56">2021/11/29</span>
+        </a>
+        
+        <a  class=""
+           href="/2021/12/06/PID%E7%AE%80%E5%8D%95%E6%80%BB%E7%BB%93/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="PID简单总结">PID简单总结</span>
+            <span class="post-date" title="2021-12-06 12:13:49">2021/12/06</span>
         </a>
         
     </nav>

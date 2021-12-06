@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>c++进阶 | Hexo</title>
+  <title>PID简单总结 | Hexo</title>
   <meta name="keywords" content="">
-  <meta name="description" content="c++进阶 | Hexo">
+  <meta name="description" content="PID简单总结 | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="PID小结原理推导参考PID基本原理及实现 重点关注离散后的表达式：即：由公式可知 Ki &#x3D; Kp&#x2F;Ti    Kd &#x3D; Kp*TD 各参数含义及整定PID的优势是其泛用性，确定模型的情况下实现较为容易，也能满足自动控制系统的基本要求。并且它不关心输入量和输出量具体的物理含义和物理表达式，有着一套固定的调节程式，对新手也较为友好。 比例项：比例就是用来对系统的偏差进行反应，所以只要存在偏差，比例就">
 <meta property="og:type" content="article">
@@ -334,9 +334,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-c++进阶" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-PID简单总结" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">c++进阶</h1>
+        <h1 class="article-title">PID简单总结</h1>
     
     <div class="article-meta">
         
@@ -346,7 +346,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2021-11-29 11:46:31'>2021-04-14 16:53</time>
+        创建时间:<time class="date" title='更新时间: 2021-12-06 12:54:43'>2021-12-06 12:13</time>
         
     </div>
     <div class="article-meta">
@@ -368,7 +368,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#std-vector-%E5%AE%9A%E4%B9%89%E9%95%BF%E5%BA%A6%E5%8F%AF%E5%8F%98%E7%9A%84%E6%95%B0%E7%BB%84"><span class="toc-text">std::vector 定义长度可变的数组</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80%E7%BB%B4%E6%95%B0%E7%BB%84"><span class="toc-text">一维数组</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84"><span class="toc-text">二维数组</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#argc-argv"><span class="toc-text">argc,argv</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E6%8C%87%E9%92%88"><span class="toc-text">函数指针</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80%E8%88%AC%E5%87%BD%E6%95%B0%E6%8C%87%E9%92%88"><span class="toc-text">一般函数指针</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B1%BB%E7%9A%84%E6%88%90%E5%91%98%E5%87%BD%E6%95%B0%E6%8C%87%E9%92%88"><span class="toc-text">类的成员函数指针</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E6%88%90%E5%91%98%E5%87%BD%E6%95%B0"><span class="toc-text">静态成员函数</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%80%E8%88%AC%E6%88%90%E5%91%98%E5%87%BD%E6%95%B0"><span class="toc-text">一般成员函数</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%91-txt%E6%96%87%E4%BB%B6%E5%86%99%E5%85%A5%E6%95%B0%E6%8D%AE"><span class="toc-text">向.txt文件写入数据</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#PID%E5%B0%8F%E7%BB%93"><span class="toc-text">PID小结</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%9F%E7%90%86%E6%8E%A8%E5%AF%BC"><span class="toc-text">原理推导</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%84%E5%8F%82%E6%95%B0%E5%90%AB%E4%B9%89%E5%8F%8A%E6%95%B4%E5%AE%9A"><span class="toc-text">各参数含义及整定</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%8F%E5%85%B8%E7%9A%84%E6%9C%AB%E7%AB%AF%E5%8D%95%E6%96%B9%E5%90%91%E6%81%92%E5%8A%9B%E8%B7%9F%E8%B8%AA"><span class="toc-text">经典的末端单方向恒力跟踪</span></a></li></ol></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -384,83 +384,68 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="std-vector-定义长度可变的数组"><a href="#std-vector-定义长度可变的数组" class="headerlink" title="std::vector 定义长度可变的数组"></a>std::vector 定义长度可变的数组</h3><h4 id="一维数组"><a href="#一维数组" class="headerlink" title="一维数组"></a>一维数组</h4><pre><code>std::vector&lt;std::string&gt; str;
-str.push_back(&quot;ur5e_&quot;);
-str.push_back(&quot;test1&quot;);
+        <h2 id="PID小结"><a href="#PID小结" class="headerlink" title="PID小结"></a>PID小结</h2><h3 id="原理推导"><a href="#原理推导" class="headerlink" title="原理推导"></a>原理推导</h3><p>参考<a target="_blank" rel="noopener" href="https://www.cnblogs.com/foxclever/p/8902029.html">PID基本原理及实现</a></p>
+<p>重点关注离散后的表达式：<br><img src="https://gitee.com/dmzecho/dmzecho.gitee.io/raw/master/%E7%A6%BB%E6%95%A3PID_1.jpg" alt="PID离散化"><br>即：<br><img src="https://gitee.com/dmzecho/dmzecho.gitee.io/raw/master/%E7%A6%BB%E6%95%A3PID_2.jpg" alt="PID离散化"><br>由公式可知 Ki = Kp/Ti    Kd = Kp*TD</p>
+<h3 id="各参数含义及整定"><a href="#各参数含义及整定" class="headerlink" title="各参数含义及整定"></a>各参数含义及整定</h3><p>PID的优势是其泛用性，确定模型的情况下实现较为容易，也能满足自动控制系统的基本要求。并且它不关心输入量和输出量具体的物理含义和物理表达式，有着一套固定的调节程式，对新手也较为友好。</p>
+<p>比例项：比例就是用来对系统的偏差进行反应，所以只要存在偏差，比例就会起作用。<br>积分项：积分主要是用来消除静差，所谓静差就是指系统稳定后输入输出之间依然存在的差值，积分就是通过偏差的累计来抵消系统的静差。<br>微分项：微分则是对偏差的变化趋势做出反应，根据偏差的变化趋势实现超前调节，提高反应速度。</p>
+<p>参数整定顺序：<br>参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/zhengyanan815/article/details/72918636">PID参数整定过程</a></p>
+<p>简单总结为：</p>
+<p>a.确定比例增益P<br>　　确定比例增益P时，首先去掉PID的积分项和微分项，一般是令Ti=0、Td=0，使PID为纯比例调节。输入设定为系统允许的最大值的60%<del>70%，由0逐渐加大比例增益P，直至系统出现振荡；再反过来，从此时的比例增益P逐渐减小，直至系统振荡消失，记录此时的比例增益P，设定PID的比例增益P为当前值的60%</del>70%。比例增益P调试完成。</p>
+<p>b.确定积分时间常数Ti<br>　　比例增益P确定后，设定一个较大的积分时间常数Ti的初值，然后逐渐减小Ti，直至系统出现振荡，之后再反过来，逐渐加大Ti，直至系统振荡消失。记录此时的Ti，设定PID的积分时间常数Ti为当前值的150%~180%。积分时间常数Ti调试完成。</p>
+<p>c.确定微分时间常数Td<br>　　积分时间常数Td一般不用设定，为0即可。若要设定，与确定 P和Ti的方法相同，取不振荡时的30%。 </p>
+<p>d.系统空载、带载联调，再对PID参数进行微调，直至满足要求。</p>
+<h4 id="经典的末端单方向恒力跟踪"><a href="#经典的末端单方向恒力跟踪" class="headerlink" title="经典的末端单方向恒力跟踪"></a>经典的末端单方向恒力跟踪</h4><p>参数初始化</p>
+<pre><code>def PID_param_init():
+    global _err_p,_err_i,_err_d,_err_dp,_delta_f2x
+    _err_p = 0       
+    _err_i = 0
+    _err_d = 0
+    _err_dp = 0
+    _sum_PID = 0
+    _delta_f2x = 0
+</code></pre>
+<p>恒力跟踪PID的实现（以位置调节量去控制末端接触力）</p>
+<pre><code>def force_PID(pidParam,limit,h,ref_force):
+    # input pidParam (3,)   PID参数    kp,ki,kd
+            # limit   位置限制    h 控制周期
+            # ref_force  参考力     contact_force  实际接触力
+    # output delt_dz    返回z方向位置调节量
+    global wrench_end,_err_p,_err_i,_err_d,_err_dp,_delta_f2x
 
-for (int i=0;i&lt;str.size();i++)&#123;
-    std::cout&lt;&lt;str[i]&lt;&lt;&quot; &quot;;
-&#125;
-std::cout&lt;&lt;std::endl;
-//str.size() 用于获取数组长度 
-</code></pre>
-<h4 id="二维数组"><a href="#二维数组" class="headerlink" title="二维数组"></a>二维数组</h4><pre><code>std::vector&lt;std::vector&lt;int&gt; &gt; vec(1);   //指定行数
-vec[0].resize(2);    //指定列数
-vec[0][0]=2;
-vec[0][1]=1;
-for(int i=0;i&lt;vec.size();i++) &#123;
-    for (int j = 0; j &lt; vec[0].size(); j++) &#123;
-        std::cout &lt;&lt; vec[i][j] &lt;&lt; &quot; &quot;;
-    &#125;
-    std::cout &lt;&lt; std::endl;
-&#125;
-</code></pre>
-<h3 id="argc-argv"><a href="#argc-argv" class="headerlink" title="argc,argv"></a>argc,argv</h3><pre><code>int main(int argc, char *argv[])&#123;
-    //argc 命令行变量的数量，argv命令行变量的数组
-&#125;
-</code></pre>
-<h3 id="函数指针"><a href="#函数指针" class="headerlink" title="函数指针"></a>函数指针</h3><h4 id="一般函数指针"><a href="#一般函数指针" class="headerlink" title="一般函数指针"></a>一般函数指针</h4><pre><code>#定义一个函数
-void test(int a)&#123;
-    std::cout&lt;&lt;&quot;a的值为：&quot;&lt;&lt;a&lt;&lt;std::endl;
-&#125;
-int main()&#123;
-    void (*test1)(int) = &amp;test;   //指针test1指向函数test的地址
-    (*test1)(1);
-    //test1(1)   也可以
-&#125;
-</code></pre>
-<h4 id="类的成员函数指针"><a href="#类的成员函数指针" class="headerlink" title="类的成员函数指针"></a>类的成员函数指针</h4><h5 id="静态成员函数"><a href="#静态成员函数" class="headerlink" title="静态成员函数"></a>静态成员函数</h5><pre><code>class shownum&#123;
-public:
-    //定义静态成员函数
-    static void shown(int a)
-    &#123;
-        std::cout&lt;&lt;&quot;a的值为：&quot;&lt;&lt;a&lt;&lt;std::endl;
-    &#125;
+    # 传入PID参数 kp,ki,kd
+    _kp = pidParam[0]
+    _ki = pidParam[1]
+    _kd = pidParam[2]
+    _limit_delta_f2x = limit         #末端z方向的位移限制
+    _h = h
+
+    ref_force = ref_force             #期望控制力
+    contact_force = wrench_end[2]     #末端z方向的实际接触力
+
+    #确定比例项
+    _err_p = ref_force + contact_force    #力的偏差（期望控制量的偏差）
+
+    #确定积分项
+    if (_delta_f2x&lt;_limit_delta_f2x):
+        _err_i = _err_i + _err_p * _h
     
-&#125;
+    #确定微分项
+    _err_d = (_err_p - _err_dp)/_h    #相邻两次偏差值的差
+    _err_dp = _err_p        
 
-int main()&#123;
-    //类的静态成员函数指针，不指定作用域
-    void(*test)(int) = &amp;shownum::showm;  
-    (*test)(3);
-    //test(3);   也可以
- &#125;
- 
-</code></pre>
-<h5 id="一般成员函数"><a href="#一般成员函数" class="headerlink" title="一般成员函数"></a>一般成员函数</h5><pre><code>class shownum&#123;
-public:
-    void shown(int a)
-    &#123;
-        std::cout&lt;&lt;&quot;a的值为：&quot;&lt;&lt;a&lt;&lt;std::endl;
-    &#125;
-    
-&#125;
+    #确定总的调节量
+    _sum_PID = _kp * _err_p + _ki * _err_i + _kd * _err_d
 
-int main()&#123;
-    void(shownum::*test)(int) = &amp;shownum::showm; 
-    shownum d; 
-    (d.*test)(3);    //调用时*test就相当于shownum::showm
-    //shownum *d =new shownum;
-    //(d-&gt;*fun)(55);
- &#125;
-</code></pre>
-<h3 id="向-txt文件写入数据"><a href="#向-txt文件写入数据" class="headerlink" title="向.txt文件写入数据"></a>向.txt文件写入数据</h3><pre><code>std::ofstream fp;
-fp.open(&quot;./data.txt&quot;,std::ios::app);     //文件名  追加写入
-if(!fp.is_open())&#123;
-std::cout&lt;&lt;&quot;打开文件失败！！\n&quot;;
-&#125;
-fp&lt;&lt;f[0]&lt;&lt;&quot;\n&quot;;    //写入数据
-fp.close();
+    if _sum_PID &gt; _limit_delta_f2x:
+        _delta_f2x = _limit_delta_f2x
+    elif _sum_PID &lt; -_limit_delta_f2x:
+        _delta_f2x = -_limit_delta_f2x
+    else:
+        _delta_f2x = _sum_PID
+
+    delt_dz = _delta_f2x
+
+    return   delt_dz           #返回位置调节量
 </code></pre>
 
       
@@ -471,12 +456,12 @@ fp.close();
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>c++进阶</p>
+    <p><span class="copy-title">文章标题:</span>PID简单总结</p>
     
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="DmzEcho">DmzEcho</a></p>
-    <p><span class="copy-title">发布时间:</span>2021-04-14, 16:53:37</p>
-    <p><span class="copy-title">最后更新:</span>2021-11-29, 11:46:31</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2021/04/14/c++%E8%BF%9B%E9%98%B6/" title="c++进阶">http://example.com/2021/04/14/c++%E8%BF%9B%E9%98%B6/</a>
+    <p><span class="copy-title">发布时间:</span>2021-12-06, 12:13:49</p>
+    <p><span class="copy-title">最后更新:</span>2021-12-06, 12:54:43</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2021/12/06/PID%E7%AE%80%E5%8D%95%E6%80%BB%E7%BB%93/" title="PID简单总结">http://example.com/2021/12/06/PID%E7%AE%80%E5%8D%95%E6%80%BB%E7%BB%93/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>

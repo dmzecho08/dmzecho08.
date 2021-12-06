@@ -6,20 +6,20 @@
   <meta name="keywords" content=" math ">
   <meta name="description" content="四元数 | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="Markdown语法摘自https:&#x2F;&#x2F;www.jianshu.com&#x2F;p&#x2F;191d1e21f7ed&#x2F; 标题在想要设置为标题的文字前面加#来表示一个#是一级标题，二个#是二级标题，以此类推 注：标准语法一般在#后跟个空格再写文字 字体加粗要加粗的文字左右分别用两个*号包起来 斜体要倾斜的文字左右分别用一个*号包起来 倾斜加粗要倾斜和加粗的文字左右分别用三个*号包起来 分割线三个或者三个以上的 -">
+<meta name="description" content="PID小结原理推导参考PID基本原理及实现 重点关注离散后的表达式：即：由公式可知 Ki &#x3D; Kp&#x2F;Ti    Kd &#x3D; Kp*TD 各参数含义及整定PID的优势是其泛用性，确定模型的情况下实现较为容易，也能满足自动控制系统的基本要求。并且它不关心输入量和输出量具体的物理含义和物理表达式，有着一套固定的调节程式，对新手也较为友好。 比例项：比例就是用来对系统的偏差进行反应，所以只要存在偏差，比例就">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Markdown语法基础">
-<meta property="og:url" content="http://example.com/2021/11/29/Markdown%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/index.html">
+<meta property="og:title" content="PID简单总结">
+<meta property="og:url" content="http://example.com/2021/12/06/PID%E7%AE%80%E5%8D%95%E6%80%BB%E7%BB%93/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Markdown语法摘自https:&#x2F;&#x2F;www.jianshu.com&#x2F;p&#x2F;191d1e21f7ed&#x2F; 标题在想要设置为标题的文字前面加#来表示一个#是一级标题，二个#是二级标题，以此类推 注：标准语法一般在#后跟个空格再写文字 字体加粗要加粗的文字左右分别用两个*号包起来 斜体要倾斜的文字左右分别用一个*号包起来 倾斜加粗要倾斜和加粗的文字左右分别用三个*号包起来 分割线三个或者三个以上的 -">
+<meta property="og:description" content="PID小结原理推导参考PID基本原理及实现 重点关注离散后的表达式：即：由公式可知 Ki &#x3D; Kp&#x2F;Ti    Kd &#x3D; Kp*TD 各参数含义及整定PID的优势是其泛用性，确定模型的情况下实现较为容易，也能满足自动控制系统的基本要求。并且它不关心输入量和输出量具体的物理含义和物理表达式，有着一套固定的调节程式，对新手也较为友好。 比例项：比例就是用来对系统的偏差进行反应，所以只要存在偏差，比例就">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://gitee.com/dmzecho/dmzecho.gitee.io/raw/master/Chongqing.jpg">
-<meta property="article:published_time" content="2021-11-29T13:54:56.000Z">
-<meta property="article:modified_time" content="2021-12-01T03:21:40.706Z">
+<meta property="og:image" content="https://gitee.com/dmzecho/dmzecho.gitee.io/raw/master/%E7%A6%BB%E6%95%A3PID_1.jpg">
+<meta property="og:image" content="https://gitee.com/dmzecho/dmzecho.gitee.io/raw/master/%E7%A6%BB%E6%95%A3PID_2.jpg">
+<meta property="article:published_time" content="2021-12-06T04:13:49.000Z">
+<meta property="article:modified_time" content="2021-12-06T04:54:43.721Z">
 <meta property="article:author" content="DmzEcho">
-<meta property="article:tag" content="markdown">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://gitee.com/dmzecho/dmzecho.gitee.io/raw/master/Chongqing.jpg">
+<meta name="twitter:image" content="https://gitee.com/dmzecho/dmzecho.gitee.io/raw/master/%E7%A6%BB%E6%95%A3PID_1.jpg">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -82,7 +82,7 @@
 
 
 <ul>
-    <li><div class="all active">全部文章<small>(18)</small></div></li>
+    <li><div class="all active">全部文章<small>(19)</small></div></li>
     
 </ul>
 <div class="left-bottom">
@@ -94,7 +94,7 @@
     </div>
     <div><a class="about  site_url"  href="/about">关于</a></div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="18">
+<input type="hidden" id="yelog_site_posts_number" value="19">
 
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -314,6 +314,14 @@
             <span class="post-date" title="2021-11-29 12:54:56">2021/11/29</span>
         </a>
         
+        <a  class=""
+           href="/2021/12/06/PID%E7%AE%80%E5%8D%95%E6%80%BB%E7%BB%93/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="PID简单总结">PID简单总结</span>
+            <span class="post-date" title="2021-12-06 12:13:49">2021/12/06</span>
+        </a>
+        
     </nav>
 </div>
     </div>
@@ -344,7 +352,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2021-11-29 11:46:31'>2020-11-24 11:50</time>
+        创建时间:<time class="date" title='更新时间: 2021-12-02 21:55:21'>2020-11-24 11:50</time>
         
     </div>
     <div class="article-meta">
@@ -366,7 +374,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9B%E5%85%83%E6%95%B0%E4%B8%8E%E6%97%8B%E8%BD%AC%E7%9F%A9%E9%98%B5"><span class="toc-text">四元数与旋转矩阵</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E5%85%83%E6%95%B0%E4%B9%98%E6%B3%95python"><span class="toc-text">四元数乘法python</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%B2%E7%9F%A5%E6%9C%AB%E7%AB%AF%E5%A7%BF%E6%80%81%E7%9A%84%E5%9B%9B%E5%85%83%E6%95%B0%E8%A1%A8%E7%A4%BA%EF%BC%8C%E6%B1%82%E6%9C%AB%E7%AB%AFz%E8%BD%B4%E7%9A%84%E5%90%91%E9%87%8F%E8%A1%A8%E7%A4%BA"><span class="toc-text">已知末端姿态的四元数表示，求末端z轴的向量表示</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%B2%E7%9F%A5%E6%9C%AB%E7%AB%AF%E5%A7%BF%E6%80%81%EF%BC%8C%E6%B1%82%E7%BB%95z%E8%BD%B4%E6%97%8B%E8%BD%AC120%E5%BA%A6%E7%9A%84%E6%96%B0%E5%A7%BF%E6%80%81"><span class="toc-text">已知末端姿态，求绕z轴旋转120度的新姿态</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%9D%E8%B7%AF1-%E9%80%9A%E8%BF%87%E9%BD%90%E6%AC%A1%E6%97%8B%E8%BD%AC%E7%9F%A9%E9%98%B5%E9%97%B4%E6%8E%A5%E8%BD%AC%E5%8C%96"><span class="toc-text">思路1 通过齐次旋转矩阵间接转化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%9D%E8%B7%AF%E4%BA%8C-%E5%9B%9B%E5%85%83%E6%95%B0%E4%B9%98%E6%B3%95%E7%9B%B4%E6%8E%A5%E8%AE%A1%E7%AE%97"><span class="toc-text">思路二 四元数乘法直接计算</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E5%85%83%E6%95%B0%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F"><span class="toc-text">四元数计算公式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%9B%E5%85%83%E6%95%B0%E4%B9%98%E6%B3%95"><span class="toc-text">四元数乘法</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E5%85%83%E6%95%B0%E8%B7%9D%E7%A6%BB"><span class="toc-text">四元数距离</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9B%E5%85%83%E6%95%B0%E4%B8%8E%E6%97%8B%E8%BD%AC%E7%9F%A9%E9%98%B5"><span class="toc-text">四元数与旋转矩阵</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2021-12-02%E6%9B%B4%E6%96%B0"><span class="toc-text">2021.12.02更新</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%B7%B2%E7%9F%A5%E5%BD%93%E5%89%8D%E5%A7%BF%E6%80%81q1-w-x-y-z-%EF%BC%8C%E8%A7%92%E9%80%9F%E5%BA%A6dx%EF%BC%8C%E5%91%A8%E6%9C%9Fdt%EF%BC%8C%E6%B1%82%E4%B8%8B%E4%B8%80%E6%97%B6%E5%88%BB%E5%A7%BF%E6%80%81"><span class="toc-text">已知当前姿态q1[w,x,y,z]，角速度dx，周期dt，求下一时刻姿态</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%B7%B2%E7%9F%A5%E5%BD%93%E5%89%8D%E5%92%8C%E4%B8%80%E4%B8%AA%E5%91%A8%E6%9C%9F%E5%90%8E%E7%9A%84%E5%A7%BF%E6%80%81%EF%BC%8C%E6%B1%82%E8%A7%92%E9%80%9F%E5%BA%A6"><span class="toc-text">已知当前和一个周期后的姿态，求角速度</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E5%85%83%E6%95%B0%E4%B9%98%E6%B3%95python"><span class="toc-text">四元数乘法python</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%B2%E7%9F%A5%E6%9C%AB%E7%AB%AF%E5%A7%BF%E6%80%81%E7%9A%84%E5%9B%9B%E5%85%83%E6%95%B0%E8%A1%A8%E7%A4%BA%EF%BC%8C%E6%B1%82%E6%9C%AB%E7%AB%AFz%E8%BD%B4%E7%9A%84%E5%90%91%E9%87%8F%E8%A1%A8%E7%A4%BA"><span class="toc-text">已知末端姿态的四元数表示，求末端z轴的向量表示</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%B2%E7%9F%A5%E6%9C%AB%E7%AB%AF%E5%A7%BF%E6%80%81%EF%BC%8C%E6%B1%82%E7%BB%95z%E8%BD%B4%E6%97%8B%E8%BD%AC120%E5%BA%A6%E7%9A%84%E6%96%B0%E5%A7%BF%E6%80%81"><span class="toc-text">已知末端姿态，求绕z轴旋转120度的新姿态</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%9D%E8%B7%AF1-%E9%80%9A%E8%BF%87%E9%BD%90%E6%AC%A1%E6%97%8B%E8%BD%AC%E7%9F%A9%E9%98%B5%E9%97%B4%E6%8E%A5%E8%BD%AC%E5%8C%96"><span class="toc-text">思路1 通过齐次旋转矩阵间接转化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%9D%E8%B7%AF%E4%BA%8C-%E5%9B%9B%E5%85%83%E6%95%B0%E4%B9%98%E6%B3%95%E7%9B%B4%E6%8E%A5%E8%AE%A1%E7%AE%97"><span class="toc-text">思路二 四元数乘法直接计算</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E5%85%83%E6%95%B0%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F"><span class="toc-text">四元数计算公式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%9B%E5%85%83%E6%95%B0%E4%B9%98%E6%B3%95"><span class="toc-text">四元数乘法</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E5%85%83%E6%95%B0%E8%B7%9D%E7%A6%BB"><span class="toc-text">四元数距离</span></a></li></ol></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -384,6 +392,28 @@
       
         <h1 id="四元数与旋转矩阵"><a href="#四元数与旋转矩阵" class="headerlink" title="四元数与旋转矩阵"></a>四元数与旋转矩阵</h1><p>部分摘自 <a target="_blank" rel="noopener" href="https://krasjet.github.io/quaternion/quaternion.pdf">https://krasjet.github.io/quaternion/quaternion.pdf</a><br>        里面对四元数和3D旋转的关系以及四元数乘法运算讲得很详细</p>
 <p>四元数的介绍视频 <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1SW411y7W1">https://www.bilibili.com/video/BV1SW411y7W1</a><br><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Lt411U7og">https://www.bilibili.com/video/BV1Lt411U7og</a></p>
+<h3 id="2021-12-02更新"><a href="#2021-12-02更新" class="headerlink" title="2021.12.02更新"></a>2021.12.02更新</h3><p>用现成的四元数的库来做计算</p>
+<pre><code>import quaternion as qua # [w,x,y,z] order
+// https://github.com/moble/quaternion  install quaternion and numba
+//四元数库的安装
+
+q1 = np.array([1,0,0,0])
+qua.from_float_array( q1)   //从numpy变成四元数（w x y z）
+
+qua.as_float_array    //把四元数变成numpy   （w x y z）
+</code></pre>
+<h5 id="已知当前姿态q1-w-x-y-z-，角速度dx，周期dt，求下一时刻姿态"><a href="#已知当前姿态q1-w-x-y-z-，角速度dx，周期dt，求下一时刻姿态" class="headerlink" title="已知当前姿态q1[w,x,y,z]，角速度dx，周期dt，求下一时刻姿态"></a>已知当前姿态q1[w,x,y,z]，角速度dx，周期dt，求下一时刻姿态</h5><pre><code>qua.as_float_array( qua.from_rotation_vector(dx*dt) * qua.from_float_array(q1)
+</code></pre>
+<h5 id="已知当前和一个周期后的姿态，求角速度"><a href="#已知当前和一个周期后的姿态，求角速度" class="headerlink" title="已知当前和一个周期后的姿态，求角速度"></a>已知当前和一个周期后的姿态，求角速度</h5><pre><code>q1 //当前姿态
+q2 //一个周期后的姿态  [x,y,z,w]
+a= np.array([[q1[3],q1[2],-q1[1]],
+            [-q1[2],q1[3],q1[0]],
+            [q1[1],-q1[0],q1[3]],
+            [-q1[0],-q1[1],-q1[2]]])
+b = (q2-q1)/dt
+
+dx = np.dot(np.linalg.pinv(a),b)*2.00     //角速度
+</code></pre>
 <h3 id="四元数乘法python"><a href="#四元数乘法python" class="headerlink" title="四元数乘法python"></a>四元数乘法python</h3><pre><code>import numpy as np
 
 def qua_multi(qa,qb,m):
@@ -574,7 +604,7 @@ def qua_log(q0):
     
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="DmzEcho">DmzEcho</a></p>
     <p><span class="copy-title">发布时间:</span>2020-11-24, 11:50:58</p>
-    <p><span class="copy-title">最后更新:</span>2021-11-29, 11:46:31</p>
+    <p><span class="copy-title">最后更新:</span>2021-12-02, 21:55:21</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/11/24/%E5%9B%9B%E5%85%83%E6%95%B0/" title="四元数">http://example.com/2020/11/24/%E5%9B%9B%E5%85%83%E6%95%B0/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。

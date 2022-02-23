@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>xx | Hexo</title>
+  <title>数据结构学习 | Hexo</title>
   <meta name="keywords" content="">
-  <meta name="description" content="xx | Hexo">
+  <meta name="description" content="数据结构学习 | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="不定期记录数据结构的学习情况，主要是备份数据结构用C++语言实现的代码，学习笔记不定期随意更新 顺序表（线性表的顺序存储）#include &lt;stdio.h&gt; #include&lt;iostream&gt; #include&lt;string&gt; using namespace std;  #define Maxsize 100  struct Sqlist &amp;#123;">
 <meta property="og:type" content="article">
@@ -339,9 +339,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-xx" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-数据结构学习" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">xx</h1>
+        <h1 class="article-title">数据结构学习</h1>
     
     <div class="article-meta">
         
@@ -351,7 +351,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2021-12-01 11:17:34'>2019-11-02 16:43</time>
+        创建时间:<time class="date" title='更新时间: 2022-02-24 03:13:33'>2022-02-24 03:00</time>
         
     </div>
     <div class="article-meta">
@@ -373,7 +373,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#leap-motion"><span class="toc-text">leap motion</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%95%E7%9B%AE%E6%91%84%E5%83%8F%E5%A4%B4%E4%B8%8E%E5%8F%8C%E7%9B%AE%E6%91%84%E5%83%8F%E5%A4%B4%E5%9C%A8%E6%B5%8B%E8%B7%9D%E4%B8%8A%E7%9A%84%E5%B7%AE%E5%BC%82"><span class="toc-text">单目摄像头与双目摄像头在测距上的差异</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#gitee%E9%83%A8%E7%BD%B2%E6%B5%8B%E8%AF%95"><span class="toc-text">gitee部署测试</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%BA%E5%BA%8F%E8%A1%A8%EF%BC%88%E7%BA%BF%E6%80%A7%E8%A1%A8%E7%9A%84%E9%A1%BA%E5%BA%8F%E5%AD%98%E5%82%A8%EF%BC%89"><span class="toc-text">顺序表（线性表的顺序存储）</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -389,59 +389,82 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <pre><code>sudo apt install ros-kinetic- //用于安装ros中的依赖项
+        <p>不定期记录数据结构的学习情况，主要是备份数据结构用C++语言实现的代码，学习笔记不定期随意更新</p>
+<h3 id="顺序表（线性表的顺序存储）"><a href="#顺序表（线性表的顺序存储）" class="headerlink" title="顺序表（线性表的顺序存储）"></a>顺序表（线性表的顺序存储）</h3><pre><code>#include &lt;stdio.h&gt;
+#include&lt;iostream&gt;
+#include&lt;string&gt;
+using namespace std;
+
+#define Maxsize 100
+
+struct Sqlist &#123;
+    // 顺序表结构体
+    int* elem;        //首地址
+    int length;       //当前表长
+&#125;;
+
+void ListInsert(Sqlist &amp;L,int i,int e) &#123;
+//input :    顺序表的引用
+//           插入位置
+//           插入的元素
+
+//异常情况抛出
+if (L.length == Maxsize) &#123;
+    cout &lt;&lt; &quot;表已满，无法插入&quot; &lt;&lt; endl;
+    return;
+&#125;
+if (i&lt;1 || i&gt;L.length + 1) &#123;
+    cout &lt;&lt; &quot;插入位置错误&quot; &lt;&lt; endl;
+    return;
+&#125;
+for (int j = L.length - 1; j &gt;=i - 1; j--) &#123;
+    L.elem[j + 1] = L.elem[j];
+&#125;
+L.elem[i - 1] = e;
+L.length++;
+
+&#125;
+
+void ListErase(Sqlist&amp; L,int i) &#123;
+//删除第i个元素
+
+//异常情况抛出
+if (i&lt;1 || i&gt;L.length) &#123;
+    cout &lt;&lt; &quot;删除错误&quot; &lt;&lt; endl;
+    return;
+&#125;
+for (int j = i - 1; j &lt; L.length - 1; j++) &#123;
+    L.elem[j] = L.elem[j + 1];
+&#125;
+L.length--;
+
+&#125;
+
+void PrintList(Sqlist&amp; L) &#123;
+//打印当前顺序表
+for (int i = 0; i &lt; L.length; i++) &#123;
+    cout &lt;&lt; L.elem[i] &lt;&lt; &quot; &quot;;
+&#125;
+cout &lt;&lt; endl;
+&#125;
+
+int  main() &#123;
+//初始化顺序表
+Sqlist L;
+L.elem = new int[Maxsize];   //分配内存
+L.length = 0;                //当前表长
+ListInsert(L, 1, 2);
+ListInsert(L, L.length + 1, 3);
+ListInsert(L, L.length + 1, 4);
+ListInsert(L, 1, 5);        // &#123;5,2,3,4&#125;
+ListErase(L, 2);
+PrintList(L);              //&#123;5,3,4&#125;
+
+delete L.elem;
+return 0;
+
+&#125;
 </code></pre>
-<p>samba服务器客户端</p>
-<pre><code>sudo apt install smbclient
-sudo apt-get install cifs-utils   #下载相应组件
-sudo mount -t cifs //10.1.1.20/share  /home/xx/share  #挂载服务器
-//10.1.1.20/share    /home/xx/share cifs passward=123,dir_mode=0777,file_mode=0777 0 0  #ubuntu16开机自动挂载
-</code></pre>
-<p>  在catch_bottle.launch里面，点击ur5e_ros_control.launch，ctrl+b进入文件，修改robot_ip为对应的虚拟机里面的IP地址。<br>  修改虚拟机ip的方法<br>  sudo ifconfig eth0 10.1.1.190</p>
-<p>ctrl+h为显示隐藏文件,再点一次为隐藏</p>
-<pre><code>sudo gedit /etc/hosts  //为Ubuntu 16.04 修改hosts的命令，例：添加一行  10.1.1.20  server-power//实验室服务器
-
-
-sudo apt-get --purge remove+包名  //卸载软件
-
-
-dpkg --list //可以查看安装的所有的软件，并且是按首字母排序
-
-sudo apt-get -f install //能装好大部分的依赖；
-
-sudo apt-get install+依赖名  //可以安装指定的依赖项
-
-sudo chmod 777+文件的完整路径     //可修改文件权限为可写
-
-sudo rm -rf+文件名 //暴力删除文件
-
-wine uninstaller //卸载用wine安装的软件
-</code></pre>
-<p>c++中在全局声明中使用 using namespace std,表示使std命名空间中的名称全局可用。类似的有using std::cout，使标准库中的cout在指定区域内可用。</p>
-<pre><code>wine CAJVieweru.exe  #打开知网阅读器,需要在软件安装目录下，wine为Ubuntu运行Windows程序的工具。
-
-sudo mount -t cifs //10.1.1.20/share  /home/xx/share  #挂载服务器 
-</code></pre>
-<p>不能用“PATH=/some /directory”，因为这将删除 $PATH 中其他的所有目录，只能作添加：“PATH=$PATH:/some/directory”。</p>
-<p>  clion使用技巧，如果发现添加了新的项目，编译找不到相关节点， 首先在clion里查看环境配置，看是否配置了有关路径。之外可以删除cmake-build-debug文件，用rebuild project重新生成，再编译运行。<br>  如果该项目之前放在其他位置运行过，最好完全删除之前的，避免相互影响。  </p>
-<h2 id="leap-motion"><a href="#leap-motion" class="headerlink" title="leap motion"></a>leap motion</h2><pre><code>sudo leapd #运行leapd
-
-LeapControlPanel #打开控制面板 或者用命令
-
-LeapControlPanel --showsettings
-
-Visualizer #可视化
-</code></pre>
-<h2 id="单目摄像头与双目摄像头在测距上的差异"><a href="#单目摄像头与双目摄像头在测距上的差异" class="headerlink" title="单目摄像头与双目摄像头在测距上的差异"></a>单目摄像头与双目摄像头在测距上的差异</h2><p>   单目摄像头的大致测距原理，是先通过图像匹配进行目标识别（各种车型、行人、物体等），再通过目标在图像中的大小去估算目标距离。这就要求在估算距离之前首先对目标进行准确识别，是汽车还是行人，是货车、SUV还是小轿车。准确识别是准确估算距离的第一步。<br>   而双目检测的方式就是通过对两幅图像视差的计算，直接对前方景物（图像所拍摄到的范围）进行距离测量，而无需判断前方出现的是什么类型的障碍物。所以对于任何类型的障碍物，都能根据距离信息的变化，进行必要的预警或制动。<br>    #引用自<a target="_blank" rel="noopener" href="http://www.eepw.com.cn/article/201710/367600.htm">http://www.eepw.com.cn/article/201710/367600.htm</a></p>
-<pre><code>roslaunch gazebo_ros empty_world.launch #开启gazebo
-rm test.txt #删除test文件
-rm -r test #删除非空文件夹及其目录下的所有文件夹及文件
-rmdir test #删除空文件夹
-
-killall gzserver
-killall gzclient
-</code></pre>
-<h3 id="gitee部署测试"><a href="#gitee部署测试" class="headerlink" title="gitee部署测试"></a>gitee部署测试</h3><p><img src="https://gitee.com/dmzecho/dmzecho.gitee.io/raw/master/gitee_test.jpg" alt="gitee_test"></p>
 
       
        
@@ -451,12 +474,12 @@ killall gzclient
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>xx</p>
+    <p><span class="copy-title">文章标题:</span>数据结构学习</p>
     
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="DmzEcho">DmzEcho</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-11-02, 16:43:17</p>
-    <p><span class="copy-title">最后更新:</span>2021-12-01, 11:17:34</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/11/02/xx/" title="xx">http://example.com/2019/11/02/xx/</a>
+    <p><span class="copy-title">发布时间:</span>2022-02-24, 03:00:50</p>
+    <p><span class="copy-title">最后更新:</span>2022-02-24, 03:13:33</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2022/02/24/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0/" title="数据结构学习">http://example.com/2022/02/24/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>

@@ -6,17 +6,20 @@
   <meta name="keywords" content="">
   <meta name="description" content="数据结构学习 | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="不定期记录数据结构的学习情况，主要是备份数据结构用C++语言实现的代码，学习笔记不定期随意更新 顺序表（线性表的顺序存储）#include &lt;stdio.h&gt; #include&lt;iostream&gt; #include&lt;string&gt; using namespace std;  #define Maxsize 100  struct Sqlist &amp;#123;">
+<meta name="description" content="PID小结原理推导参考PID基本原理及实现 重点关注离散后的表达式：即：由公式可知 Ki &#x3D; Kp&#x2F;Ti，Kd &#x3D; Kp*TD 各参数含义及整定PID的优势是其泛用性，确定模型的情况下实现较为容易，也能满足自动控制系统的基本要求。并且它不关心输入量和输出量具体的物理含义和物理表达式，有着一套固定的调节程式，对新手也较为友好。 比例项：比例就是用来对系统的偏差进行反应，所以只要存在偏差，比例就会起作">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数据结构学习">
-<meta property="og:url" content="http://example.com/2022/02/24/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0/index.html">
+<meta property="og:title" content="PID简单总结">
+<meta property="og:url" content="http://example.com/2021/12/06/PID%E7%AE%80%E5%8D%95%E6%80%BB%E7%BB%93/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="不定期记录数据结构的学习情况，主要是备份数据结构用C++语言实现的代码，学习笔记不定期随意更新 顺序表（线性表的顺序存储）#include &lt;stdio.h&gt; #include&lt;iostream&gt; #include&lt;string&gt; using namespace std;  #define Maxsize 100  struct Sqlist &amp;#123;">
+<meta property="og:description" content="PID小结原理推导参考PID基本原理及实现 重点关注离散后的表达式：即：由公式可知 Ki &#x3D; Kp&#x2F;Ti，Kd &#x3D; Kp*TD 各参数含义及整定PID的优势是其泛用性，确定模型的情况下实现较为容易，也能满足自动控制系统的基本要求。并且它不关心输入量和输出量具体的物理含义和物理表达式，有着一套固定的调节程式，对新手也较为友好。 比例项：比例就是用来对系统的偏差进行反应，所以只要存在偏差，比例就会起作">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-02-23T19:00:50.000Z">
-<meta property="article:modified_time" content="2022-02-23T19:13:33.600Z">
+<meta property="og:image" content="https://gitee.com/dmzecho/dmzecho.gitee.io/raw/master/%E7%A6%BB%E6%95%A3PID_1.jpg">
+<meta property="og:image" content="https://gitee.com/dmzecho/dmzecho.gitee.io/raw/master/%E7%A6%BB%E6%95%A3PID_2.jpg">
+<meta property="article:published_time" content="2021-12-06T04:13:49.000Z">
+<meta property="article:modified_time" content="2021-12-06T05:04:56.583Z">
 <meta property="article:author" content="DmzEcho">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/dmzecho/dmzecho.gitee.io/raw/master/%E7%A6%BB%E6%95%A3PID_1.jpg">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -351,7 +354,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2022-02-24 03:13:33'>2022-02-24 03:00</time>
+        创建时间:<time class="date" title='更新时间: 2022-02-24 03:17:09'>2022-02-24 03:00</time>
         
     </div>
     <div class="article-meta">
@@ -404,64 +407,64 @@ struct Sqlist &#123;
 &#125;;
 
 void ListInsert(Sqlist &amp;L,int i,int e) &#123;
-//input :    顺序表的引用
-//           插入位置
-//           插入的元素
+    //input :    顺序表的引用
+    //           插入位置
+    //           插入的元素
 
-//异常情况抛出
-if (L.length == Maxsize) &#123;
-    cout &lt;&lt; &quot;表已满，无法插入&quot; &lt;&lt; endl;
-    return;
-&#125;
-if (i&lt;1 || i&gt;L.length + 1) &#123;
-    cout &lt;&lt; &quot;插入位置错误&quot; &lt;&lt; endl;
-    return;
-&#125;
-for (int j = L.length - 1; j &gt;=i - 1; j--) &#123;
-    L.elem[j + 1] = L.elem[j];
-&#125;
-L.elem[i - 1] = e;
-L.length++;
+    //异常情况抛出
+    if (L.length == Maxsize) &#123;
+        cout &lt;&lt; &quot;表已满，无法插入&quot; &lt;&lt; endl;
+        return;
+    &#125;
+    if (i&lt;1 || i&gt;L.length + 1) &#123;
+        cout &lt;&lt; &quot;插入位置错误&quot; &lt;&lt; endl;
+        return;
+    &#125;
+    for (int j = L.length - 1; j &gt;=i - 1; j--) &#123;
+        L.elem[j + 1] = L.elem[j];
+    &#125;
+    L.elem[i - 1] = e;
+    L.length++;
 
 &#125;
 
 void ListErase(Sqlist&amp; L,int i) &#123;
-//删除第i个元素
+    //删除第i个元素
 
-//异常情况抛出
-if (i&lt;1 || i&gt;L.length) &#123;
-    cout &lt;&lt; &quot;删除错误&quot; &lt;&lt; endl;
-    return;
-&#125;
-for (int j = i - 1; j &lt; L.length - 1; j++) &#123;
-    L.elem[j] = L.elem[j + 1];
-&#125;
-L.length--;
+    //异常情况抛出
+    if (i&lt;1 || i&gt;L.length) &#123;
+        cout &lt;&lt; &quot;删除错误&quot; &lt;&lt; endl;
+        return;
+    &#125;
+    for (int j = i - 1; j &lt; L.length - 1; j++) &#123;
+        L.elem[j] = L.elem[j + 1];
+    &#125;
+    L.length--;
 
 &#125;
 
 void PrintList(Sqlist&amp; L) &#123;
-//打印当前顺序表
-for (int i = 0; i &lt; L.length; i++) &#123;
-    cout &lt;&lt; L.elem[i] &lt;&lt; &quot; &quot;;
-&#125;
-cout &lt;&lt; endl;
+    //打印当前顺序表
+    for (int i = 0; i &lt; L.length; i++) &#123;
+        cout &lt;&lt; L.elem[i] &lt;&lt; &quot; &quot;;
+    &#125;
+    cout &lt;&lt; endl;
 &#125;
 
 int  main() &#123;
-//初始化顺序表
-Sqlist L;
-L.elem = new int[Maxsize];   //分配内存
-L.length = 0;                //当前表长
-ListInsert(L, 1, 2);
-ListInsert(L, L.length + 1, 3);
-ListInsert(L, L.length + 1, 4);
-ListInsert(L, 1, 5);        // &#123;5,2,3,4&#125;
-ListErase(L, 2);
-PrintList(L);              //&#123;5,3,4&#125;
+    //初始化顺序表
+    Sqlist L;
+    L.elem = new int[Maxsize];   //分配内存
+    L.length = 0;                //当前表长
+    ListInsert(L, 1, 2);
+    ListInsert(L, L.length + 1, 3);
+    ListInsert(L, L.length + 1, 4);
+    ListInsert(L, 1, 5);        // &#123;5,2,3,4&#125;
+    ListErase(L, 2);
+    PrintList(L);              //&#123;5,3,4&#125;
 
-delete L.elem;
-return 0;
+    delete L.elem;
+    return 0;
 
 &#125;
 </code></pre>
@@ -478,7 +481,7 @@ return 0;
     
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="DmzEcho">DmzEcho</a></p>
     <p><span class="copy-title">发布时间:</span>2022-02-24, 03:00:50</p>
-    <p><span class="copy-title">最后更新:</span>2022-02-24, 03:13:33</p>
+    <p><span class="copy-title">最后更新:</span>2022-02-24, 03:17:09</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/2022/02/24/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0/" title="数据结构学习">http://example.com/2022/02/24/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。

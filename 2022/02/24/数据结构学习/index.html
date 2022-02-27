@@ -6,20 +6,17 @@
   <meta name="keywords" content="">
   <meta name="description" content="数据结构学习 | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="PID小结原理推导参考PID基本原理及实现 重点关注离散后的表达式：即：由公式可知 Ki &#x3D; Kp&#x2F;Ti，Kd &#x3D; Kp*TD 各参数含义及整定PID的优势是其泛用性，确定模型的情况下实现较为容易，也能满足自动控制系统的基本要求。并且它不关心输入量和输出量具体的物理含义和物理表达式，有着一套固定的调节程式，对新手也较为友好。 比例项：比例就是用来对系统的偏差进行反应，所以只要存在偏差，比例就会起作">
+<meta name="description" content="不定期记录数据结构的学习情况，主要是备份数据结构用C++语言实现的代码，学习笔记不定期随意更新 顺序表（线性表的顺序存储）#include &lt;stdio.h&gt; #include&lt;iostream&gt; #include&lt;string&gt; using namespace std;  #define Maxsize 100  struct Sqlist &amp;#123;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="PID简单总结">
-<meta property="og:url" content="http://example.com/2021/12/06/PID%E7%AE%80%E5%8D%95%E6%80%BB%E7%BB%93/index.html">
+<meta property="og:title" content="数据结构学习">
+<meta property="og:url" content="http://example.com/2022/02/24/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="PID小结原理推导参考PID基本原理及实现 重点关注离散后的表达式：即：由公式可知 Ki &#x3D; Kp&#x2F;Ti，Kd &#x3D; Kp*TD 各参数含义及整定PID的优势是其泛用性，确定模型的情况下实现较为容易，也能满足自动控制系统的基本要求。并且它不关心输入量和输出量具体的物理含义和物理表达式，有着一套固定的调节程式，对新手也较为友好。 比例项：比例就是用来对系统的偏差进行反应，所以只要存在偏差，比例就会起作">
+<meta property="og:description" content="不定期记录数据结构的学习情况，主要是备份数据结构用C++语言实现的代码，学习笔记不定期随意更新 顺序表（线性表的顺序存储）#include &lt;stdio.h&gt; #include&lt;iostream&gt; #include&lt;string&gt; using namespace std;  #define Maxsize 100  struct Sqlist &amp;#123;">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://gitee.com/dmzecho/dmzecho.gitee.io/raw/master/%E7%A6%BB%E6%95%A3PID_1.jpg">
-<meta property="og:image" content="https://gitee.com/dmzecho/dmzecho.gitee.io/raw/master/%E7%A6%BB%E6%95%A3PID_2.jpg">
-<meta property="article:published_time" content="2021-12-06T04:13:49.000Z">
-<meta property="article:modified_time" content="2021-12-06T05:04:56.583Z">
+<meta property="article:published_time" content="2022-02-23T19:00:50.000Z">
+<meta property="article:modified_time" content="2022-02-27T19:14:08.425Z">
 <meta property="article:author" content="DmzEcho">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://gitee.com/dmzecho/dmzecho.gitee.io/raw/master/%E7%A6%BB%E6%95%A3PID_1.jpg">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -354,7 +351,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2022-02-24 03:17:09'>2022-02-24 03:00</time>
+        创建时间:<time class="date" title='更新时间: 2022-02-28 03:14:08'>2022-02-24 03:00</time>
         
     </div>
     <div class="article-meta">
@@ -376,7 +373,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%BA%E5%BA%8F%E8%A1%A8%EF%BC%88%E7%BA%BF%E6%80%A7%E8%A1%A8%E7%9A%84%E9%A1%BA%E5%BA%8F%E5%AD%98%E5%82%A8%EF%BC%89"><span class="toc-text">顺序表（线性表的顺序存储）</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%BA%E5%BA%8F%E8%A1%A8%EF%BC%88%E7%BA%BF%E6%80%A7%E8%A1%A8%E7%9A%84%E9%A1%BA%E5%BA%8F%E5%AD%98%E5%82%A8%EF%BC%89"><span class="toc-text">顺序表（线性表的顺序存储）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%BA%E5%BA%8F%E8%A1%A8%E7%BB%83%E4%B9%A0"><span class="toc-text">顺序表练习</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%95%E9%93%BE%E8%A1%A8%E7%BB%83%E4%B9%A0"><span class="toc-text">单链表练习</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -468,6 +465,174 @@ int  main() &#123;
 
 &#125;
 </code></pre>
+<h3 id="顺序表练习"><a href="#顺序表练习" class="headerlink" title="顺序表练习"></a>顺序表练习</h3><pre><code>#include&lt;stdio.h&gt;
+#include&lt;iostream&gt;
+
+//用顺序表实现下面各步骤，并分步打印结果
+//1、新建顺序表存储（a,b,c,d)
+//2、在第二个位置插入c，表成为（a,c,b,c,d)
+//删掉第二个c，（a,c,b,d）
+
+typedef struct &#123;
+    char* p;    //首地址
+    int length;   //当前表长
+
+&#125;Sqlist;
+
+void PrintList(Sqlist L) &#123;
+    //打印当前顺序表
+    if (!(L.length)) &#123;
+        std::cout &lt;&lt; &quot;当前顺序表为空&quot;;
+    &#125;
+    for (int i = 0; i &lt; L.length; i++) &#123;
+        std::cout &lt;&lt; L.p[i] &lt;&lt; &quot; &quot;;
+    &#125;
+    std::cout &lt;&lt; std::endl;
+&#125;
+
+void InsertElem(Sqlist&amp; L,int i,char e) &#123;
+    //在第i个位置插入字符
+    if (i&lt;1 || i&gt;L.length + 1) &#123;
+        std::cout &lt;&lt; &quot;插入错误！！&quot; &lt;&lt; std::endl;
+        return;
+    &#125;
+    for (int j = L.length - 1; j &gt;= i - 1;j--) &#123;
+        L.p[j + 1] = L.p[j];
+    &#125;
+    L.p[i - 1] = e;
+    L.length++;
+&#125;
+
+void EraseElem(Sqlist &amp;L,int i) &#123;
+    //删掉第i个元素
+    if (i&lt;1 || i&gt;L.length) &#123;
+        std::cout &lt;&lt; &quot;删除错误&quot; &lt;&lt; std::endl;
+        return;
+    &#125;
+    for (int j = i - 1; j &lt; L.length - 1; j ++ ) &#123;
+        L.p[j] = L.p[j + 1];
+    &#125;
+    L.length--;
+&#125;
+
+int main() &#123;
+    //初始化
+    Sqlist L;
+    L.p = new char[20];
+    L.length = 0;
+
+    //赋值
+    L.p[0] = &#39;a&#39;;
+    L.p[1] = &#39;b&#39;;
+    L.p[2] = &#39;c&#39;;
+    L.p[3] = &#39;d&#39;;
+    L.length = 4;
+    PrintList(L);
+
+    //在第二个位置插入c
+    InsertElem(L, 2, &#39;c&#39;);
+    PrintList(L);
+
+    //删掉第四个元素
+    EraseElem(L, 4);
+    PrintList(L);
+
+    return 0;
+&#125;
+</code></pre>
+<h3 id="单链表练习"><a href="#单链表练习" class="headerlink" title="单链表练习"></a>单链表练习</h3><pre><code>//用链表实现下面各步骤，并分步打印结果
+//1、新建链表存储（a,b,c,d)
+//2、在第二个位置插入c，表成为（a,c,b,c,d)
+//删掉第二个c，（a,c,b,d）
+
+#include&lt;stdio.h&gt;
+#include&lt;iostream&gt;
+
+typedef struct CharList&#123;
+    char data;
+    struct CharList* next;
+&#125;Lnode,*Linklist;
+
+void PrintList(Linklist L) &#123;
+    //打印链表
+    Lnode* p = L-&gt;next;
+    if (p == NULL) &#123;
+        std::cout &lt;&lt; &quot;链表为空&quot; &lt;&lt; std::endl;
+    &#125;
+    else &#123;
+        while (p) &#123;
+            std::cout &lt;&lt; p-&gt;data &lt;&lt; &quot; &quot;;
+            p = p-&gt;next;
+        &#125;
+        std::cout &lt;&lt; std::endl;
+    &#125;
+&#125;
+
+void InsertElem(Linklist&amp; L, int i, char e) &#123;
+    //在链表第i个元素的位置插入字符
+    //找到第i-1个元素
+    Lnode* p = L;
+    int j = 0;
+    while (p &amp;&amp;j &lt; i - 1) &#123;
+        p = p-&gt;next;
+        j++;
+    &#125;
+    if (!p || j &gt; i - 1) &#123;
+        std::cout &lt;&lt; &quot;插入错误&quot; &lt;&lt; std::endl;
+        return;
+    &#125;
+    Lnode* q = new Lnode;
+    q-&gt;data = e;
+    q-&gt;next = p-&gt;next;
+    p-&gt;next = q;
+&#125;
+
+void EraseList(Linklist&amp; L, int i) &#123;
+    //删除第i个元素
+    Lnode* p = L-&gt;next;
+    int j = 1;
+    //找到第i-1个元素
+    while (p-&gt;next&amp;&amp; j &lt; i - 1) &#123;
+        p = p-&gt;next;
+        j++;
+    &#125;
+    if (!(p-&gt;next) || j &gt; i - 1) &#123;
+        std::cout &lt;&lt; &quot;删除错误&quot; &lt;&lt; std::endl;
+        return;
+    &#125;
+    p-&gt;next = p-&gt;next-&gt;next;
+&#125;
+
+int main() &#123;
+    //链表初始化
+    Linklist L;
+    L = new Lnode;
+    L-&gt;next = NULL;
+
+    //使用尾插法建立链表（a,b,c,d）通过循环通过键盘输入来实现
+    Lnode* r = L;        //让r始终指向链表尾部
+    for (int i = 1; i &lt; 5; i++) &#123;
+        Lnode* p = new Lnode;
+        std::cout &lt;&lt; &quot;请输入字符&quot; &lt;&lt; std::endl;
+        std::cin &gt;&gt; p-&gt;data;
+        r-&gt;next = p;
+        p-&gt;next = NULL;
+        r = p;
+    &#125;
+    PrintList(L);
+
+    //2、在第二个位置插入c，表成为（a,c,b,c,d)
+    InsertElem(L, 2, &#39;c&#39;);
+    PrintList(L);
+
+    //删掉第二个c，（a,c,b,d）
+    EraseList(L, 4);
+    PrintList(L);
+
+    return 0;
+
+&#125;
+</code></pre>
 
       
        
@@ -481,7 +646,7 @@ int  main() &#123;
     
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="DmzEcho">DmzEcho</a></p>
     <p><span class="copy-title">发布时间:</span>2022-02-24, 03:00:50</p>
-    <p><span class="copy-title">最后更新:</span>2022-02-24, 03:17:09</p>
+    <p><span class="copy-title">最后更新:</span>2022-02-28, 03:14:08</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/2022/02/24/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0/" title="数据结构学习">http://example.com/2022/02/24/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。

@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>hexo d 部署报错  | Hexo</title>
+  <title>numpy常用函数总结 | Hexo</title>
   <meta name="keywords" content="">
-  <meta name="description" content="hexo d 部署报错  | Hexo">
+  <meta name="description" content="numpy常用函数总结 | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="numpy矩阵运算库常用函数矩阵创建import numpy as np  np.array()    #创建 ndarray 数组[[ ]，[ ],、、、] np.zeros((3,2))   # 创建3×2的ndarray  np.zeros((3,))维度为1 全部元素为0 np.ones((3,4))    # 全部元素为1 np.empty()          #与np.zeros()">
 <meta property="og:type" content="article">
@@ -347,9 +347,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-hexo-d-部署报错" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-numpy常用函数总结" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">hexo d 部署报错 </h1>
+        <h1 class="article-title">numpy常用函数总结</h1>
     
     <div class="article-meta">
         
@@ -359,7 +359,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2021-11-29 11:46:31'>2021-11-19 11:21</time>
+        创建时间:<time class="date" title='更新时间: 2022-05-18 15:57:26'>2022-05-18 15:41</time>
         
     </div>
     <div class="article-meta">
@@ -381,7 +381,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#numpy%E7%9F%A9%E9%98%B5%E8%BF%90%E7%AE%97%E5%BA%93%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0"><span class="toc-text">numpy矩阵运算库常用函数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9F%A9%E9%98%B5%E5%88%9B%E5%BB%BA"><span class="toc-text">矩阵创建</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B9%98%E6%B3%95%E5%92%8C%E6%B1%82%E5%92%8C"><span class="toc-text">乘法和求和</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#np-concatenate-%E7%9F%A9%E9%98%B5%E6%8B%BC%E6%8E%A5"><span class="toc-text">np.concatenate 矩阵拼接</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AD%89%E9%97%B4%E8%B7%9D%E9%87%87%E6%A0%B7-numpy-linspace"><span class="toc-text">等间距采样 numpy.linspace</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#numpy%E7%9A%84%E8%BE%93%E5%87%BA%E7%94%B1%E5%B0%8F%E6%95%B0%E5%8F%98%E4%B8%BA%E5%88%86%E6%95%B0"><span class="toc-text">numpy的输出由小数变为分数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9F%A9%E9%98%B5%E7%9A%84%E7%A7%A9"><span class="toc-text">矩阵的秩</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9F%A9%E9%98%B5%E7%9A%84%E7%89%B9%E5%BE%81%E5%80%BC%E5%92%8C%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F"><span class="toc-text">矩阵的特征值和特征向量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9F%A9%E9%98%B5%E7%9A%84%E8%BD%AC%E7%BD%AE"><span class="toc-text">矩阵的转置</span></a></li></ol></li></ol></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -397,16 +397,63 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>错误显示 </p>
-<pre><code>FATAL Something&#39;s wrong. Maybe you can find the solution here: https://hexo.io/docs/troubleshooting.html
-Error: Spawn failed
-    at ChildProcess.&lt;anonymous&gt; (/home/xx/myblog/node_modules/hexo-util/lib/spawn.js:51:21)
-    at ChildProcess.emit (events.js:210:5)
-    at Process.ChildProcess._handle.onexit (internal/child_process.js:272:12)
+        <h1 id="numpy矩阵运算库常用函数"><a href="#numpy矩阵运算库常用函数" class="headerlink" title="numpy矩阵运算库常用函数"></a>numpy矩阵运算库常用函数</h1><h4 id="矩阵创建"><a href="#矩阵创建" class="headerlink" title="矩阵创建"></a>矩阵创建</h4><pre><code>import numpy as np
+
+np.array()    #创建 ndarray 数组[[ ]，[ ],、、、]
+np.zeros((3,2))   # 创建3×2的ndarray  np.zeros((3,))维度为1 全部元素为0
+np.ones((3,4))    # 全部元素为1
+np.empty()          #与np.zeros()类似 
+np.eye(3)      # 创建 3*3的对角矩阵
 </code></pre>
-<p>解决方案</p>
-<p>参考：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/38219432">知乎：hexo_d报错解决方法</a></p>
-<p>修改配置文件：根目录下的_config.yml，修改deploy节点<br>改为：<br>deploy:<br>type: git<br>repo:  https://{yourname}:{yourpassword}@github.com/{yourname}/{yourname}.github.io.git<br>branch: master</p>
+<h4 id="乘法和求和"><a href="#乘法和求和" class="headerlink" title="乘法和求和"></a>乘法和求和</h4><pre><code>np.dot( , )            #矩阵乘法（点乘）
+np.cross( , )       # 叉乘
+np.linalg.det()   #方阵行列式
+np.linalg.inv()   #矩阵求逆
+np.sum()
+b=np.array([[ 0,  1,  2,  3,  4,  5],
+   [ 6,  7,  8,  9, 10, 11]])
+&gt;&gt;&gt; np.sum(b)    #默认对所有元素进行求和
+66
+&gt;&gt;&gt; np.sum(b,axis=0)        #在第一个轴展开方向上求和
+array([ 6,  8, 10, 12, 14, 16])
+&gt;&gt;&gt; np.sum(b,axis=1)
+array([15, 51])
+</code></pre>
+<h4 id="np-concatenate-矩阵拼接"><a href="#np-concatenate-矩阵拼接" class="headerlink" title="np.concatenate 矩阵拼接"></a>np.concatenate 矩阵拼接</h4><pre><code>x = np.ones((100,1))
+y = np.zeros((100,1))
+# 若 x[100,1],y[100,1]
+xy = np.concatenate([x,y],axis = 0)
+# 按行拼接 ，xy[200,1]
+xy1 = np.concatenate([x,y],axis = 1)
+# 按列拼接 ，xy[100,2]
+</code></pre>
+<h4 id="等间距采样-numpy-linspace"><a href="#等间距采样-numpy-linspace" class="headerlink" title="等间距采样 numpy.linspace"></a>等间距采样 numpy.linspace</h4><pre><code>#np.linspace()
+
+import numpy as np
+a = np.linspace(start, end ,num=100, endpoint =True)
+</code></pre>
+<h4 id="numpy的输出由小数变为分数"><a href="#numpy的输出由小数变为分数" class="headerlink" title="numpy的输出由小数变为分数"></a>numpy的输出由小数变为分数</h4><pre><code>import fractions
+
+np.set_printoptions(formatter=&#123;&#39;all&#39;:lambda x: str(fractions.Fraction(x).limit_denominator())&#125;)
+print(A_inv)
+</code></pre>
+<h4 id="矩阵的秩"><a href="#矩阵的秩" class="headerlink" title="矩阵的秩"></a>矩阵的秩</h4><pre><code>a = np.array([[0,1,0],
+            [0,0,1],
+            [-4,-8,-5]])
+print np.linalg.matrix_rank(a)
+</code></pre>
+<h4 id="矩阵的特征值和特征向量"><a href="#矩阵的特征值和特征向量" class="headerlink" title="矩阵的特征值和特征向量"></a>矩阵的特征值和特征向量</h4><pre><code>a = np.array([[0,1,0],
+            [0,0,1],
+            [-4,-8,-5]])   
+A,B=np.linalg.eig(a)
+
+# A为特征值组成的向量，B为特征向量组成的矩阵
+</code></pre>
+<h4 id="矩阵的转置"><a href="#矩阵的转置" class="headerlink" title="矩阵的转置"></a>矩阵的转置</h4><pre><code>a = np.array([[0,1,0],
+            [0,0,1],
+            [-4,-8,-5]]) 
+print np.transpose(a)
+</code></pre>
 
       
        
@@ -416,12 +463,12 @@ Error: Spawn failed
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>hexo d 部署报错 </p>
+    <p><span class="copy-title">文章标题:</span>numpy常用函数总结</p>
     
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="DmzEcho">DmzEcho</a></p>
-    <p><span class="copy-title">发布时间:</span>2021-11-19, 11:21:02</p>
-    <p><span class="copy-title">最后更新:</span>2021-11-29, 11:46:31</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2021/11/19/hexo-d-%E9%83%A8%E7%BD%B2%E6%8A%A5%E9%94%99/" title="hexo d 部署报错 ">http://example.com/2021/11/19/hexo-d-%E9%83%A8%E7%BD%B2%E6%8A%A5%E9%94%99/</a>
+    <p><span class="copy-title">发布时间:</span>2022-05-18, 15:41:36</p>
+    <p><span class="copy-title">最后更新:</span>2022-05-18, 15:57:26</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2022/05/18/numpy%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E6%80%BB%E7%BB%93/" title="numpy常用函数总结">http://example.com/2022/05/18/numpy%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E6%80%BB%E7%BB%93/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
